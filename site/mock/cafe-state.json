@@ -1,0 +1,23 @@
+{
+ "name": "otto",
+ "species": "hedgehog",
+ "tick": 0,
+ "clock": "2026-11-02T15:40:00",
+ "asleep": false,
+ "needs": {
+  "energy": 0.8,
+  "fullness": 0.6,
+  "warmth": 0.7,
+  "calm": 0.6,
+  "wonder": 0.5
+ },
+ "location": "cafe",
+ "carrying": [],
+ "coins": 12,
+ "doing": {
+  "verb": "idle",
+  "what": ""
+ },
+ "weather": "",
+ "mood": "settled"
+}

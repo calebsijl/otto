@@ -1,0 +1,1715 @@
+{
+ "places": {
+  "house_main": {
+   "name": "otto's front room",
+   "description": "low ceiling, one window onto the lane, a stove in the corner that he is proud of.",
+   "warmth": 0.8,
+   "exits": [
+    "house_back",
+    "lane_top"
+   ],
+   "pos": [
+    -6,
+    0,
+    -9
+   ],
+   "size": [
+    7,
+    5,
+    7
+   ],
+   "kind": "indoor",
+   "style": "brick"
+  },
+  "house_back": {
+   "name": "the back room",
+   "description": "where he sleeps and where things end up when he has not decided about them yet.",
+   "warmth": 0.7,
+   "exits": [
+    "house_main",
+    "yard"
+   ],
+   "pos": [
+    -6,
+    0,
+    -16
+   ],
+   "size": [
+    6,
+    4,
+    6
+   ],
+   "kind": "indoor",
+   "style": "brick"
+  },
+  "lane_top": {
+   "name": "top of the lane",
+   "description": "cobbles, a drain he does not trust, his own front door on one side.",
+   "warmth": 0.35,
+   "exits": [
+    "house_main",
+    "lane_bottom",
+    "shop_general",
+    "orchard",
+    "restaurant",
+    "river_bank"
+   ],
+   "pos": [
+    0,
+    0,
+    -8
+   ],
+   "size": [
+    8,
+    0,
+    14
+   ],
+   "kind": "street"
+  },
+  "lane_bottom": {
+   "name": "bottom of the lane",
+   "description": "where the lane gives up and turns into grass. a bench too big for him.",
+   "warmth": 0.35,
+   "exits": [
+    "lane_top",
+    "shop_oddments",
+    "post_office",
+    "library",
+    "stream",
+    "river_bank",
+    "tip",
+    "cafe"
+   ],
+   "pos": [
+    0,
+    0,
+    8
+   ],
+   "size": [
+    8,
+    0,
+    16
+   ],
+   "kind": "street"
+  },
+  "shop_general": {
+   "name": "the general shop",
+   "description": "food, mostly. smells of paper bags.",
+   "warmth": 0.6,
+   "exits": [
+    "lane_top"
+   ],
+   "pos": [
+    7,
+    0,
+    -9
+   ],
+   "size": [
+    7,
+    6,
+    7
+   ],
+   "kind": "shop",
+   "style": "shopfront"
+  },
+  "shop_oddments": {
+   "name": "oddments",
+   "description": "everything that is not food. nothing is labelled. nobody is ever behind the counter.",
+   "warmth": 0.6,
+   "exits": [
+    "lane_bottom"
+   ],
+   "pos": [
+    7,
+    0,
+    4
+   ],
+   "size": [
+    7,
+    6,
+    7
+   ],
+   "kind": "shop",
+   "style": "timber"
+  },
+  "post_office": {
+   "name": "the post office",
+   "description": "one counter, a wall of small brass boxes. things from caleb arrive here.",
+   "warmth": 0.6,
+   "exits": [
+    "lane_bottom"
+   ],
+   "pos": [
+    7,
+    0,
+    13
+   ],
+   "size": [
+    7,
+    5,
+    7
+   ],
+   "kind": "civic",
+   "style": "stone"
+  },
+  "library": {
+   "name": "the library",
+   "description": "one room, colder than it should be, a shelf that caleb keeps putting things on.",
+   "warmth": 0.45,
+   "exits": [
+    "lane_bottom"
+   ],
+   "pos": [
+    -7,
+    0,
+    11
+   ],
+   "size": [
+    8,
+    7,
+    8
+   ],
+   "kind": "civic",
+   "style": "stone_tall"
+  },
+  "orchard": {
+   "name": "the orchard",
+   "kind": "earth",
+   "style": "",
+   "description": "four old pear trees in a row, further apart than they look from the lane. the ground is soft with fallen fruit and the wasps are busy.",
+   "warmth": 0.4,
+   "pos": [
+    -24.0,
+    0,
+    -32.0
+   ],
+   "size": [
+    14,
+    0,
+    11
+   ],
+   "exits": [
+    "yard",
+    "lane_top",
+    "lane_out"
+   ]
+  },
+  "restaurant": {
+   "name": "the eating house",
+   "kind": "shop",
+   "style": "timber",
+   "description": "three tables, a counter, and a kitchen you can hear but not see. warm in a way the lane never is. you have to pay.",
+   "warmth": 0.85,
+   "pos": [
+    10.8,
+    0,
+    -1.0
+   ],
+   "size": [
+    8,
+    5.5,
+    8
+   ],
+   "exits": [
+    "lane_top"
+   ]
+  },
+  "yard": {
+   "name": "the yard behind his house",
+   "kind": "earth",
+   "description": "soil, a leaf pile he has been adding to, and the back wall of his own house. his, in a way the lane is not. a gate in the hedge, into the orchard.",
+   "warmth": 0.4,
+   "pos": [
+    -20.2,
+    0,
+    -19.5
+   ],
+   "size": [
+    9,
+    0,
+    9
+   ],
+   "exits": [
+    "house_back",
+    "hedge",
+    "orchard"
+   ]
+  },
+  "hedge": {
+   "name": "under the hedge",
+   "kind": "hedge",
+   "description": "a low green tunnel running the length of the gardens. dark, dry, full of small noises. nothing bigger than him can get in here.",
+   "warmth": 0.55,
+   "pos": [
+    -24.8,
+    0,
+    -3.0
+   ],
+   "size": [
+    5,
+    0,
+    18
+   ],
+   "exits": [
+    "yard",
+    "pond"
+   ]
+  },
+  "pond": {
+   "name": "the pond",
+   "kind": "water",
+   "description": "bigger than it looks from the bank. reeds at one end, a flat stone at the other, and the whole sky lying on it.",
+   "warmth": 0.25,
+   "pos": [
+    -26.4,
+    0,
+    21.0
+   ],
+   "size": [
+    11,
+    0,
+    11
+   ],
+   "exits": [
+    "hedge",
+    "stream"
+   ]
+  },
+  "stream": {
+   "name": "the stream",
+   "kind": "water",
+   "description": "it leaves the pond and goes under the lane. about two of him wide, moving fast, and nowhere to cross.",
+   "warmth": 0.25,
+   "pos": [
+    -12.4,
+    0,
+    31.5
+   ],
+   "size": [
+    16,
+    0,
+    5
+   ],
+   "exits": [
+    "pond",
+    "lane_bottom",
+    "far_bank",
+    "river"
+   ]
+  },
+  "far_bank": {
+   "name": "the far bank",
+   "kind": "earth",
+   "description": "the other side of the stream. you have looked at it a great many times. you have never been on it.",
+   "warmth": 0.35,
+   "pos": [
+    -12.4,
+    0,
+    40.5
+   ],
+   "size": [
+    9,
+    0,
+    6
+   ],
+   "exits": [
+    "stream"
+   ]
+  },
+  "river": {
+   "name": "the river",
+   "kind": "water",
+   "description": "it runs the whole length of the back of the houses and keeps going both ways. wider than the stream and slower. the shallow end at the top is barely over your head and the bottom end is not.",
+   "warmth": 0.25,
+   "pos": [
+    30.0,
+    0,
+    2.0
+   ],
+   "size": [
+    9,
+    0,
+    54
+   ],
+   "exits": [
+    "river_bank",
+    "stream"
+   ]
+  },
+  "river_bank": {
+   "name": "the back bank",
+   "kind": "earth",
+   "description": "the strip of rough grass between the backs of the shops and the water. nobody comes here. it is the best place in the lane and you found it yourself.",
+   "warmth": 0.4,
+   "pos": [
+    21.5,
+    0,
+    2.0
+   ],
+   "size": [
+    7,
+    0,
+    50
+   ],
+   "exits": [
+    "river",
+    "lane_top",
+    "lane_bottom"
+   ]
+  },
+  "tip": {
+   "name": "the tip",
+   "kind": "earth",
+   "pos": [
+    10,
+    0,
+    22
+   ],
+   "size": [
+    8,
+    0,
+    8
+   ],
+   "exits": [
+    "lane_bottom"
+   ],
+   "description": "where the village puts what it has finished with. a low heap, gone through by rain. things in it are not yours or anyone's."
+  },
+  "lane_out": {
+   "name": "the way out of the village",
+   "kind": "street",
+   "known": false,
+   "pos": [
+    -14,
+    0,
+    -46
+   ],
+   "size": [
+    6,
+    0,
+    18
+   ],
+   "exits": [
+    "orchard",
+    "church",
+    "woods"
+   ],
+   "description": "a track going away from the village, between hedges, uphill."
+  },
+  "church": {
+   "name": "the church",
+   "kind": "civic",
+   "known": false,
+   "pos": [
+    -30,
+    0,
+    -62
+   ],
+   "size": [
+    10,
+    8,
+    16
+   ],
+   "exits": [
+    "lane_out"
+   ],
+   "description": "a tower with a spire on it, and a long low part behind. the door is shut. you can see it from a long way off.",
+   "style": "stone",
+   "tower": {
+    "h": 21,
+    "spire": 15
+   },
+   "chancel": {
+    "len": 6
+   },
+   "porch": {
+    "side": 1
+   },
+   "buttresses": {
+    "count": 3
+   },
+   "lychgate": {
+    "away": 9
+   },
+   "gable": true
+  },
+  "woods": {
+   "name": "the woods",
+   "kind": "earth",
+   "known": false,
+   "pos": [
+    6,
+    0,
+    -56
+   ],
+   "size": [
+    22,
+    0,
+    18
+   ],
+   "exits": [
+    "lane_out"
+   ],
+   "description": "tall straight trees, close together, and it is darker under them."
+  },
+  "cafe": {
+   "name": "the internet cafe",
+   "kind": "shop",
+   "style": "brick",
+   "lamp": "#cfe6f2",
+   "pos": [
+    -8.5,
+    0,
+    2.0
+   ],
+   "size": [
+    6,
+    4.2,
+    6
+   ],
+   "warmth": 0.55,
+   "exits": [
+    "lane_bottom"
+   ],
+   "description": "one room off the lane. three tables, and on each one a machine. the light in here is the wrong colour and there is a sound under everything."
+  }
+ },
+ "objects": [
+  {
+   "id": "stove",
+   "name": "the stove",
+   "place": "house_main",
+   "tags": [
+    "warm",
+    "fixed"
+   ],
+   "note": "makes the front room the best room."
+  },
+  {
+   "id": "armchair",
+   "name": "a low armchair",
+   "place": "house_main",
+   "tags": [
+    "sit",
+    "fixed"
+   ],
+   "note": ""
+  },
+  {
+   "id": "table",
+   "name": "a work table",
+   "place": "house_main",
+   "tags": [
+    "surface",
+    "fixed"
+   ],
+   "note": "mostly clear."
+  },
+  {
+   "id": "bed",
+   "name": "his bed",
+   "place": "house_back",
+   "tags": [
+    "bed",
+    "fixed"
+   ],
+   "note": "leaves, a blanket, done properly."
+  },
+  {
+   "id": "shelf",
+   "name": "a shelf",
+   "place": "house_back",
+   "tags": [
+    "surface",
+    "fixed"
+   ],
+   "note": "empty at the moment."
+  },
+  {
+   "id": "string_ball",
+   "name": "a ball of string",
+   "place": "shop_oddments",
+   "tags": [
+    "shop",
+    "infinite"
+   ],
+   "price": 1,
+   "note": ""
+  },
+  {
+   "id": "paper_stack",
+   "name": "a stack of paper",
+   "place": "shop_oddments",
+   "tags": [
+    "shop",
+    "infinite"
+   ],
+   "price": 1,
+   "note": ""
+  },
+  {
+   "id": "pencil",
+   "name": "a pencil",
+   "place": "shop_oddments",
+   "tags": [
+    "shop",
+    "infinite"
+   ],
+   "price": 1,
+   "note": ""
+  },
+  {
+   "id": "shelf_library",
+   "name": "the shelf",
+   "place": "library",
+   "tags": [
+    "fixed",
+    "books"
+   ],
+   "note": "whatever caleb has put there."
+  },
+  {
+   "id": "flat_paper_bridge_18",
+   "name": "flat paper bridge",
+   "place": "library",
+   "tags": [
+    "paper",
+    "flat",
+    "bridge"
+   ],
+   "note": "a strip of paper laid flat across two stacks of books, a gap between",
+   "made_by": "otto",
+   "condition": 0.62
+  },
+  {
+   "id": "arched_paper_bridge_18",
+   "name": "arched paper bridge",
+   "place": "library",
+   "tags": [
+    "paper",
+    "arch",
+    "bridge"
+   ],
+   "note": "the same size strip of paper, curved up into an arch across the same gap",
+   "made_by": "otto",
+   "condition": 0.63
+  },
+  {
+   "id": "folded_paper_bridge_20",
+   "name": "folded paper bridge",
+   "place": "library",
+   "tags": [
+    "paper",
+    "bridge",
+    "folded"
+   ],
+   "note": "same size strip of paper as the flat one, but pleated lengthwise into ridges like a fan, laid across the gap",
+   "made_by": "otto",
+   "condition": 0.93
+  },
+  {
+   "id": "rolled_paper_bridge_20",
+   "name": "rolled paper bridge",
+   "place": "library",
+   "tags": [
+    "paper",
+    "bridge",
+    "tube"
+   ],
+   "note": "same size strip of paper rolled into a tube along its length, laid across the gap",
+   "made_by": "otto",
+   "condition": 0.69
+  },
+  {
+   "id": "thin_rolled_paper_bridge_30",
+   "name": "thin rolled paper bridge",
+   "place": "library",
+   "tags": [
+    "paper",
+    "bridge",
+    "tube"
+   ],
+   "note": "same size paper strip as the rolled one, rolled tight into a thin tube (about a pencil wide), laid across the gap",
+   "made_by": "otto",
+   "condition": 0.92
+  },
+  {
+   "id": "fat_rolled_paper_bridge_30",
+   "name": "fat rolled paper bridge",
+   "place": "library",
+   "tags": [
+    "paper",
+    "bridge",
+    "tube"
+   ],
+   "note": "same size paper strip as the rolled one, rolled loose into a fat tube (about a fist wide), laid across the gap",
+   "made_by": "otto",
+   "condition": 0.93
+  },
+  {
+   "id": "double_thin_rolled_paper_bri_31",
+   "name": "double_thin_rolled_paper_bridge",
+   "place": "library",
+   "tags": [
+    "bridge",
+    "paper",
+    "tube"
+   ],
+   "note": "two strips of the same paper laid together and rolled tight into a thin (pencil-wide) tube, same length, laid across the gap",
+   "made_by": "otto",
+   "condition": 0.93
+  },
+  {
+   "id": "tall_arched_paper_bridge_35",
+   "name": "tall_arched_paper_bridge",
+   "place": "library",
+   "tags": [
+    "paper",
+    "bridge",
+    "arch"
+   ],
+   "note": "same paper strip as the arched one, but bowed up high (about a pencil-length tall in the middle)",
+   "made_by": "otto",
+   "condition": 0.93
+  },
+  {
+   "id": "low_arched_paper_bridge_35",
+   "name": "low_arched_paper_bridge",
+   "place": "library",
+   "tags": [
+    "paper",
+    "bridge",
+    "arch"
+   ],
+   "note": "same paper strip as the arched one, but bowed only a finger-width up in the middle",
+   "made_by": "otto",
+   "condition": 0.92
+  },
+  {
+   "id": "very_tall_arched_paper_bridg_37",
+   "name": "very_tall_arched_paper_bridge_b",
+   "place": "library",
+   "tags": [
+    "paper",
+    "bridge",
+    "arch"
+   ],
+   "note": "same paper strip, arched nearly a half-circle, built again after the first one collapsed",
+   "made_by": "otto",
+   "condition": 0.69
+  },
+  {
+   "id": "a_wooden_ruler_marked_in_mil_45",
+   "name": "a wooden ruler, marked in millimetres",
+   "place": "_carried",
+   "tags": [
+    "gift"
+   ],
+   "note": "came in the post.",
+   "from": "caleb"
+  },
+  {
+   "id": "a_bundle_of_card_strips_all__45",
+   "name": "a bundle of card strips, all cut the same width",
+   "place": "_carried",
+   "tags": [
+    "gift"
+   ],
+   "note": "came in the post.",
+   "from": "caleb"
+  },
+  {
+   "id": "a_wooden_ruler_marked_in_mil_45",
+   "name": "a wooden ruler, marked in millimetres",
+   "place": "post_office",
+   "tags": [
+    "gift"
+   ],
+   "note": "came in the post.",
+   "from": "caleb"
+  },
+  {
+   "id": "a_bundle_of_card_strips_all__45",
+   "name": "a bundle of card strips, all cut the same width",
+   "place": "post_office",
+   "tags": [
+    "gift"
+   ],
+   "note": "came in the post.",
+   "from": "caleb"
+  },
+  {
+   "id": "card_tube_a_47",
+   "name": "card_tube_a",
+   "place": "library",
+   "tags": [
+    "bridge",
+    "card",
+    "tube"
+   ],
+   "note": "card strip rolled into a thin pencil-wide tube, glued at the seam, laid across the gap. made from the new same-width card strips. one of three identical.",
+   "made_by": "otto",
+   "condition": 0.92
+  },
+  {
+   "id": "card_tube_b_47",
+   "name": "card_tube_b",
+   "place": "library",
+   "tags": [
+    "bridge",
+    "card",
+    "tube"
+   ],
+   "note": "card strip rolled into a thin pencil-wide tube, glued at the seam, laid across the gap. made from the new same-width card strips. one of three identical.",
+   "made_by": "otto",
+   "condition": 0.68
+  },
+  {
+   "id": "card_tube_c_47",
+   "name": "card_tube_c",
+   "place": "library",
+   "tags": [
+    "bridge",
+    "card",
+    "tube"
+   ],
+   "note": "card strip rolled into a thin pencil-wide tube, glued at the seam, laid across the gap. made from the new same-width card strips. one of three identical.",
+   "made_by": "otto",
+   "condition": 0.93
+  },
+  {
+   "id": "arch_20mm_a_55",
+   "name": "arch_20mm_a",
+   "place": "library",
+   "tags": [
+    "bridge",
+    "arch",
+    "20mm"
+   ],
+   "note": "same paper strip as the other arches, bowed so the middle is 20mm above the ends, measured with the ruler. paper arch, ends resting on the gap edges.",
+   "made_by": "otto",
+   "condition": 0.94
+  },
+  {
+   "id": "arch_20mm_b_55",
+   "name": "arch_20mm_b",
+   "place": "library",
+   "tags": [
+    "bridge",
+    "arch",
+    "20mm"
+   ],
+   "note": "same paper strip as the other arches, bowed so the middle is 20mm above the ends, measured with the ruler. paper arch, ends resting on the gap edges.",
+   "made_by": "otto",
+   "condition": 0.94
+  },
+  {
+   "id": "arch_20mm_c_55",
+   "name": "arch_20mm_c",
+   "place": "library",
+   "tags": [
+    "bridge",
+    "arch",
+    "20mm"
+   ],
+   "note": "same paper strip as the other arches, bowed so the middle is 20mm above the ends, measured with the ruler. paper arch, ends resting on the gap edges.",
+   "made_by": "otto",
+   "condition": 0.94
+  },
+  {
+   "id": "arch_35mm_a_55",
+   "name": "arch_35mm_a",
+   "place": "library",
+   "tags": [
+    "bridge",
+    "arch",
+    "35mm"
+   ],
+   "note": "same paper strip, rise 35mm measured with ruler",
+   "made_by": "otto",
+   "condition": 0.93
+  },
+  {
+   "id": "arch_35mm_b_55",
+   "name": "arch_35mm_b",
+   "place": "library",
+   "tags": [
+    "bridge",
+    "arch",
+    "35mm"
+   ],
+   "note": "same paper strip, rise 35mm measured with ruler",
+   "made_by": "otto",
+   "condition": 0.92
+  },
+  {
+   "id": "arch_10mm_a_55",
+   "name": "arch_10mm_a",
+   "place": "library",
+   "tags": [
+    "bridge",
+    "arch",
+    "10mm"
+   ],
+   "note": "same paper strip, rise 10mm measured with ruler",
+   "made_by": "otto",
+   "condition": 0.93
+  },
+  {
+   "id": "arch_10mm_b_55",
+   "name": "arch_10mm_b",
+   "place": "library",
+   "tags": [
+    "bridge",
+    "arch",
+    "10mm"
+   ],
+   "note": "same paper strip, rise 10mm measured with ruler",
+   "made_by": "otto",
+   "condition": 0.93
+  },
+  {
+   "id": "arch_50mm_a_57",
+   "name": "arch_50mm_a",
+   "place": "library",
+   "tags": [
+    "arch",
+    "paper",
+    "bridge"
+   ],
+   "note": "paper arch, same strip as the other ruler arches, rise measured with the ruler at 50mm across the gap",
+   "made_by": "otto",
+   "condition": 0.93
+  },
+  {
+   "id": "arch_50mm_b_57",
+   "name": "arch_50mm_b",
+   "place": "library",
+   "tags": [
+    "arch",
+    "paper",
+    "bridge"
+   ],
+   "note": "paper arch, same strip as the other ruler arches, rise measured with the ruler at 50mm across the gap",
+   "made_by": "otto",
+   "condition": 0.92
+  },
+  {
+   "id": "arch_60mm_a_57",
+   "name": "arch_60mm_a",
+   "place": "library",
+   "tags": [
+    "arch",
+    "paper",
+    "bridge"
+   ],
+   "note": "paper arch, same strip as the other ruler arches, rise measured with the ruler at 60mm across the gap",
+   "made_by": "otto",
+   "condition": 0.92
+  },
+  {
+   "id": "arch_60mm_b_57",
+   "name": "arch_60mm_b",
+   "place": "library",
+   "tags": [
+    "arch",
+    "paper",
+    "bridge"
+   ],
+   "note": "paper arch, same strip as the other ruler arches, rise measured with the ruler at 60mm across the gap",
+   "made_by": "otto",
+   "condition": 0.92
+  },
+  {
+   "id": "arch_80mm_a_66",
+   "name": "arch_80mm_a",
+   "place": "library",
+   "tags": [
+    "arch",
+    "paper",
+    "80mm"
+   ],
+   "note": "paper arch, same strip as before, rise measured with the ruler: 80mm",
+   "made_by": "otto",
+   "condition": 0.86
+  },
+  {
+   "id": "arch_80mm_b_66",
+   "name": "arch_80mm_b",
+   "place": "library",
+   "tags": [
+    "arch",
+    "paper",
+    "80mm"
+   ],
+   "note": "paper arch, same strip as before, rise measured with the ruler: 80mm",
+   "made_by": "otto",
+   "condition": 0.86
+  },
+  {
+   "id": "arch_100mm_a_66",
+   "name": "arch_100mm_a",
+   "place": "library",
+   "tags": [
+    "arch",
+    "paper",
+    "100mm"
+   ],
+   "note": "paper arch, same strip as before, rise measured with the ruler: 100mm",
+   "made_by": "otto",
+   "condition": 0.86
+  },
+  {
+   "id": "arch_100mm_b_66",
+   "name": "arch_100mm_b",
+   "place": "library",
+   "tags": [
+    "arch",
+    "paper",
+    "100mm"
+   ],
+   "note": "paper arch, same strip as before, rise measured with the ruler: 100mm",
+   "made_by": "otto",
+   "condition": 0.85
+  },
+  {
+   "id": "propped_arch_40mm_a_67",
+   "name": "propped_arch_40mm_a",
+   "place": "library",
+   "tags": [
+    "arch",
+    "propped"
+   ],
+   "note": "same paper strip, same span, rise 40mm measured with the ruler, and both ends wedged against a block of card so the feet cannot spread",
+   "made_by": "otto",
+   "condition": 0.93
+  },
+  {
+   "id": "propped_arch_40mm_b_67",
+   "name": "propped_arch_40mm_b",
+   "place": "library",
+   "tags": [
+    "arch",
+    "propped"
+   ],
+   "note": "same paper strip, same span, rise 40mm measured with the ruler, and both ends wedged against a block of card so the feet cannot spread",
+   "made_by": "otto",
+   "condition": 0.98
+  },
+  {
+   "id": "propped_arch_100mm_a_77",
+   "name": "propped_arch_100mm_a",
+   "place": "library",
+   "tags": [
+    "bridge",
+    "arch",
+    "propped"
+   ],
+   "note": "paper arch from a card strip, ruler-measured 100mm rise, ends propped so they cannot spread",
+   "made_by": "otto",
+   "condition": 0.68
+  },
+  {
+   "id": "propped_arch_100mm_b_77",
+   "name": "propped_arch_100mm_b",
+   "place": "library",
+   "tags": [
+    "bridge",
+    "arch",
+    "propped"
+   ],
+   "note": "paper arch, ruler-measured 100mm rise, ends propped so they cannot spread",
+   "made_by": "otto",
+   "condition": 0.94
+  },
+  {
+   "id": "bread_81",
+   "name": "brown bread",
+   "place": "_carried",
+   "tags": [
+    "food"
+   ],
+   "price": 1,
+   "note": ""
+  },
+  {
+   "id": "propped_card_tube_a_84",
+   "name": "propped_card_tube_a",
+   "place": "library",
+   "tags": [
+    "bridge",
+    "tube",
+    "propped"
+   ],
+   "note": "thin card tube, same card strip and roll as card_tube_a/b/c, laid across the gap with both ends propped so they cannot slide or spread",
+   "made_by": "otto",
+   "condition": 0.94
+  },
+  {
+   "id": "propped_double_arch_40mm_a_92",
+   "name": "propped_double_arch_40mm_a",
+   "place": "library",
+   "tags": [
+    "arch",
+    "propped",
+    "double",
+    "paper"
+   ],
+   "note": "two card strips laid together, curved into an arch with 40mm rise measured with the ruler, ends propped so they cannot spread, across the gap",
+   "made_by": "otto",
+   "condition": 0.68
+  },
+  {
+   "id": "pear_tree_a",
+   "name": "the first pear tree",
+   "place": "orchard",
+   "tags": [
+    "tree",
+    "fixed",
+    "pear"
+   ],
+   "note": "the oldest. leans south. the fruit at the top is always best and always out of reach."
+  },
+  {
+   "id": "pear_tree_b",
+   "name": "the second pear tree",
+   "place": "orchard",
+   "tags": [
+    "tree",
+    "fixed",
+    "pear"
+   ],
+   "note": "straight, and younger. a branch comes low enough to matter."
+  },
+  {
+   "id": "pear_tree_c",
+   "name": "the third pear tree",
+   "place": "orchard",
+   "tags": [
+    "tree",
+    "fixed",
+    "pear"
+   ],
+   "note": "half dead on one side, loaded on the other."
+  },
+  {
+   "id": "pear_tree_d",
+   "name": "the fourth pear tree",
+   "place": "orchard",
+   "tags": [
+    "tree",
+    "fixed",
+    "pear"
+   ],
+   "note": "the one nearest the wall. windfalls collect against it."
+  },
+  {
+   "id": "windfalls",
+   "name": "fallen pears in the grass",
+   "place": "orchard",
+   "tags": [
+    "food",
+    "infinite",
+    "forage",
+    "sweet"
+   ],
+   "note": "bruised, warm from the ground, and sweeter than anything in the shop."
+  },
+  {
+   "id": "wasps",
+   "name": "wasps on the fallen fruit",
+   "place": "orchard",
+   "tags": [
+    "fixed",
+    "alive"
+   ],
+   "note": "busy with their own business. they have not noticed you."
+  },
+  {
+   "id": "orchard_wall",
+   "name": "the old wall",
+   "place": "orchard",
+   "tags": [
+    "fixed",
+    "stone"
+   ],
+   "note": "brick, mostly. one part has come down and nobody has put it back."
+  },
+  {
+   "id": "eh_counter",
+   "name": "the counter",
+   "place": "restaurant",
+   "tags": [
+    "fixed"
+   ],
+   "note": "too high for you by a long way. there is a step someone has left."
+  },
+  {
+   "id": "eh_table",
+   "name": "a table by the stove",
+   "place": "restaurant",
+   "tags": [
+    "fixed",
+    "sit"
+   ],
+   "note": "the warmest seat in the lane."
+  },
+  {
+   "id": "hot_supper",
+   "name": "a hot supper",
+   "place": "restaurant",
+   "tags": [
+    "food",
+    "shop",
+    "infinite",
+    "hot"
+   ],
+   "price": 2,
+   "note": "whatever is on. it costs two coins and it is worth it."
+  },
+  {
+   "id": "eh_stove",
+   "name": "the kitchen stove",
+   "place": "restaurant",
+   "tags": [
+    "warm",
+    "fixed"
+   ],
+   "note": "you cannot see it. you can feel it through the wall."
+  },
+  {
+   "id": "leaf_pile",
+   "name": "a pile of leaves",
+   "place": "yard",
+   "tags": [
+    "soft",
+    "nest",
+    "gather"
+   ],
+   "note": "dry at the bottom, damp on top. good for a nest if he wanted one."
+  },
+  {
+   "id": "flowerpot",
+   "name": "a cracked flowerpot on its side",
+   "place": "yard",
+   "tags": [
+    "shelter",
+    "fixed"
+   ],
+   "note": "the crack goes most of the way round."
+  },
+  {
+   "id": "twigs",
+   "name": "a scatter of twigs",
+   "place": "yard",
+   "tags": [
+    "material",
+    "gather"
+   ],
+   "note": "different thicknesses. some snap, some bend."
+  },
+  {
+   "id": "beetles",
+   "name": "beetles under the leaf pile",
+   "place": "yard",
+   "tags": [
+    "food",
+    "infinite",
+    "forage"
+   ],
+   "note": "you can hear them before you see them."
+  },
+  {
+   "id": "hedge_roots",
+   "name": "the hedge roots",
+   "place": "hedge",
+   "tags": [
+    "fixed",
+    "shelter"
+   ],
+   "note": "woven together over years into something like a low roof."
+  },
+  {
+   "id": "snail_shells",
+   "name": "old snail shells",
+   "place": "hedge",
+   "tags": [
+    "material",
+    "gather"
+   ],
+   "note": "empty. curved, light, surprisingly stiff."
+  },
+  {
+   "id": "worms",
+   "name": "worms in the soft ground",
+   "place": "hedge",
+   "tags": [
+    "food",
+    "infinite",
+    "forage"
+   ],
+   "note": ""
+  },
+  {
+   "id": "reeds",
+   "name": "reeds at the pond edge",
+   "place": "pond",
+   "tags": [
+    "material",
+    "gather",
+    "fixed"
+   ],
+   "note": "hollow all the way down, and straight."
+  },
+  {
+   "id": "flat_stone",
+   "name": "a flat stone at the water's edge",
+   "place": "pond",
+   "tags": [
+    "sit",
+    "fixed",
+    "warm_in_sun"
+   ],
+   "note": "holds the day's heat longer than anything else here."
+  },
+  {
+   "id": "pond_water",
+   "name": "the water",
+   "place": "pond",
+   "tags": [
+    "water",
+    "fixed",
+    "swim"
+   ],
+   "note": "cold at the edge, colder further out. you can swim, it turns out."
+  },
+  {
+   "id": "the_gap",
+   "name": "the gap the stream makes",
+   "place": "stream",
+   "tags": [
+    "fixed",
+    "gap"
+   ],
+   "note": "about two of him across. nothing spans it. you have measured it with your eye a hundred times."
+  },
+  {
+   "id": "stream_water",
+   "name": "the running water",
+   "place": "stream",
+   "tags": [
+    "water",
+    "fixed"
+   ],
+   "note": "faster than the pond. it does not stop."
+  },
+  {
+   "id": "bank_stones",
+   "name": "loose stones on the bank",
+   "place": "stream",
+   "tags": [
+    "material",
+    "gather"
+   ],
+   "note": "flat ones, round ones, one almost square."
+  },
+  {
+   "id": "unknown_plant",
+   "name": "a plant you do not know",
+   "place": "far_bank",
+   "tags": [
+    "fixed"
+   ],
+   "note": "you have only ever seen it from the other side."
+  },
+  {
+   "id": "apples",
+   "name": "a crate of small apples",
+   "place": "shop_general",
+   "tags": [
+    "food",
+    "shop",
+    "infinite"
+   ],
+   "price": 1,
+   "note": ""
+  },
+  {
+   "id": "bread",
+   "name": "brown bread",
+   "place": "shop_general",
+   "tags": [
+    "food",
+    "shop",
+    "infinite"
+   ],
+   "price": 1,
+   "note": ""
+  },
+  {
+   "id": "cheese",
+   "name": "a wedge of hard cheese",
+   "place": "shop_general",
+   "tags": [
+    "food",
+    "shop",
+    "infinite"
+   ],
+   "price": 2,
+   "note": "keeps for weeks. he has never bought it."
+  },
+  {
+   "id": "glue_pot",
+   "name": "a pot of glue",
+   "place": "shop_oddments",
+   "tags": [
+    "shop",
+    "infinite"
+   ],
+   "price": 1,
+   "note": "smells strongly. the brush is stuck to the lid."
+  },
+  {
+   "id": "wire_coil",
+   "name": "a coil of thin wire",
+   "place": "shop_oddments",
+   "tags": [
+    "shop",
+    "infinite"
+   ],
+   "price": 2,
+   "note": "bends and stays bent."
+  },
+  {
+   "id": "wool_coat",
+   "name": "a small wool coat",
+   "place": "shop_oddments",
+   "tags": [
+    "shop",
+    "clothing",
+    "warm"
+   ],
+   "price": 4,
+   "note": "made for something about your size, which is a strange thought. carry it and the cold takes longer to get in."
+  },
+  {
+   "id": "card_sheets",
+   "name": "sheets of card",
+   "place": "shop_oddments",
+   "tags": [
+    "shop",
+    "infinite"
+   ],
+   "price": 2,
+   "note": "stiffer than paper. cuts straight."
+  },
+  {
+   "id": "a_book_about_rivers_80",
+   "name": "a book about rivers",
+   "place": "post_office",
+   "tags": [
+    "gift"
+   ],
+   "note": "came in the post.",
+   "from": "caleb"
+  },
+  {
+   "id": "shallows",
+   "name": "the shallows at the top end",
+   "place": "river",
+   "tags": [
+    "water",
+    "swim",
+    "fixed",
+    "shallow",
+    "play"
+   ],
+   "note": "gravel underfoot and the water moving over it. you can stand up in this bit."
+  },
+  {
+   "id": "deep_pool",
+   "name": "the deep pool",
+   "place": "river",
+   "tags": [
+    "water",
+    "swim",
+    "fixed",
+    "deep"
+   ],
+   "note": "dark green and you cannot see the bottom. you have not been in this bit."
+  },
+  {
+   "id": "stepping_stones",
+   "name": "four stepping stones",
+   "place": "river",
+   "tags": [
+    "fixed",
+    "stone",
+    "cross"
+   ],
+   "note": "someone put them here a long time ago. the third one is missing and the gap is too wide."
+  },
+  {
+   "id": "river_reeds",
+   "name": "a bed of reeds",
+   "place": "river",
+   "tags": [
+    "material",
+    "gather",
+    "fixed"
+   ],
+   "note": "taller than the pond ones and hollow all the way down."
+  },
+  {
+   "id": "driftwood",
+   "name": "driftwood caught on the bend",
+   "place": "river_bank",
+   "tags": [
+    "material",
+    "gather"
+   ],
+   "note": "smooth, light, and already the right sort of shape for things."
+  },
+  {
+   "id": "back_wall",
+   "name": "the backs of the shops",
+   "place": "river_bank",
+   "tags": [
+    "fixed"
+   ],
+   "note": "nobody paints this side. there is a drainpipe you could climb if you were braver."
+  },
+  {
+   "id": "rough_grass",
+   "name": "rough grass",
+   "place": "river_bank",
+   "tags": [
+    "fixed",
+    "soft"
+   ],
+   "note": "long enough to disappear in."
+  },
+  {
+   "id": "snails_bank",
+   "name": "snails on the wet stones",
+   "place": "river_bank",
+   "tags": [
+    "food",
+    "infinite",
+    "forage"
+   ],
+   "note": ""
+  },
+  {
+   "id": "the_leaning_thing",
+   "name": "something leaning against the end wall",
+   "place": "lane_top",
+   "tags": [
+    "fixed",
+    "strange"
+   ],
+   "shape": "tandem",
+   "note": "two rings, taller than you, one behind the other, held apart by a frame of thin bars. there are two seats along the top, one in front of the other, and two sets of bent handles. the rings turn when you push them and the whole thing wants to fall over. it is cold and it has been rained on. you have no idea what it is, what it is for, or who left it here."
+  },
+  {
+   "name": "a coil of thin wire",
+   "place": "tip",
+   "tags": [
+    "material",
+    "gather",
+    "scrap"
+   ],
+   "note": "springy. it holds a bend if you make it sharp enough.",
+   "id": "scrap_wire"
+  },
+  {
+   "name": "a small spring",
+   "place": "tip",
+   "tags": [
+    "material",
+    "gather",
+    "scrap"
+   ],
+   "note": "pushes back when you squash it, and keeps doing it.",
+   "id": "scrap_spring"
+  },
+  {
+   "name": "a flattened tin",
+   "place": "tip",
+   "tags": [
+    "material",
+    "gather",
+    "scrap"
+   ],
+   "note": "thin metal, bright where the rain has not got at it.",
+   "id": "scrap_tin"
+  },
+  {
+   "name": "a piece of thick glass",
+   "place": "tip",
+   "tags": [
+    "material",
+    "gather",
+    "scrap"
+   ],
+   "note": "edges gone smooth. things look bent through it.",
+   "id": "scrap_glass"
+  },
+  {
+   "name": "a clock that has stopped",
+   "place": "tip",
+   "tags": [
+    "material",
+    "gather",
+    "scrap"
+   ],
+   "note": "a case, a face, and a lot of small parts behind it.",
+   "id": "scrap_clock"
+  },
+  {
+   "name": "a strip of brass",
+   "place": "tip",
+   "tags": [
+    "material",
+    "gather",
+    "scrap"
+   ],
+   "note": "heavier than it looks and it does not rust.",
+   "id": "scrap_brass"
+  },
+  {
+   "name": "a handful of corks",
+   "place": "tip",
+   "tags": [
+    "material",
+    "gather",
+    "scrap"
+   ],
+   "note": "light, and they squeeze.",
+   "id": "scrap_cork"
+  },
+  {
+   "name": "a small grey bar",
+   "place": "tip",
+   "tags": [
+    "material",
+    "gather",
+    "scrap"
+   ],
+   "note": "it sticks to the tin and not to the cork.",
+   "id": "scrap_magnet"
+  },
+  {
+   "name": "a wooden box on a post",
+   "place": "lane_bottom",
+   "tags": [
+    "fixed",
+    "box"
+   ],
+   "note": "open at the top, with a slot in the lid. there is nothing in it. whatever is left in it does not stay left.",
+   "id": "honesty_box"
+  },
+  {
+   "id": "gap_orchard",
+   "name": "a gap in the top corner",
+   "place": "orchard",
+   "tags": [
+    "fixed"
+   ],
+   "note": "the hedge stops and starts again, and the grass between is worn flat.",
+   "reveals": "lane_out"
+  },
+  {
+   "id": "tower_far",
+   "name": "something standing up above the trees",
+   "place": "lane_out",
+   "tags": [
+    "fixed"
+   ],
+   "note": "too far to make out. it is taller than it is wide and it comes to a point.",
+   "reveals": "church"
+  },
+  {
+   "id": "dark_trees",
+   "name": "a dark line along the top of the field",
+   "place": "lane_out",
+   "tags": [
+    "fixed"
+   ],
+   "note": "trees, closer together than the ones in the orchard, and no light between them.",
+   "reveals": "woods"
+  },
+  {
+   "id": "cafe_screen_a",
+   "name": "a machine with a face that lights up",
+   "place": "cafe",
+   "tags": [
+    "fixed"
+   ],
+   "note": "the face is cold white and it is not warm to touch. things move on it when you touch the board in front of it."
+  },
+  {
+   "id": "cafe_board_a",
+   "name": "a flat board covered in little squares",
+   "place": "cafe",
+   "tags": [
+    "fixed"
+   ],
+   "note": "every square has a mark on it. pressing one makes a mark appear on the lit face."
+  },
+  {
+   "id": "cafe_mouse_a",
+   "name": "a smooth lump on a cord",
+   "place": "cafe",
+   "tags": [
+    "fixed"
+   ],
+   "note": "it slides. when it slides, an arrow on the lit face slides the same way."
+  },
+  {
+   "id": "cafe_screen_b",
+   "name": "a second machine, its face dark",
+   "place": "cafe",
+   "tags": [
+    "fixed"
+   ],
+   "note": "the same as the lit one but nothing on it. there is a switch underneath."
+  },
+  {
+   "id": "cafe_counter",
+   "name": "the counter",
+   "place": "cafe",
+   "tags": [
+    "fixed"
+   ],
+   "note": "nobody behind it, same as everywhere. a bowl with coins in it and a card saying what an hour costs."
+  },
+  {
+   "id": "cafe_hum",
+   "name": "a sound under everything",
+   "place": "cafe",
+   "tags": [
+    "fixed"
+   ],
+   "note": "low, and it does not stop. you feel it in the table more than you hear it."
+  },
+  {
+   "id": "cafe_stool",
+   "name": "a stool at the middle table",
+   "place": "cafe",
+   "tags": [
+    "fixed"
+   ],
+   "note": "too tall for you. the one at the end table is not."
+  },
+  {
+   "id": "cafe_cables",
+   "name": "black cords going into the wall",
+   "place": "cafe",
+   "tags": [
+    "fixed"
+   ],
+   "note": "they come out of the backs of the machines and go in behind the skirting."
+  }
+ ]
+}

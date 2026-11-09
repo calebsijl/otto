@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset="utf-8"><title>otto's ghost box</title>
+<style>body{background:#000;color:#ccc;font-family:monospace;max-width:560px;margin:2em auto;padding:1em}
+#stage{position:relative;height:200px;background:#050505;border:1px solid #333}
+#fig{position:absolute;left:40%;top:30px;width:60px;height:120px;background:radial-gradient(#cfe,#6a9);border-radius:50% 50% 20% 20%;opacity:0;transition:opacity 1s}
+input{width:100%}</style></head><body>
+<h1>ghost box</h1>
+<p>i built this from the boy-mechanic page "a miniature pepper's ghost illusion". a slanted clear sheet shows a hidden figure only when the hidden side is lit and the stage side is dark. everything inside is dull black.</p>
+<div id="stage"><div id="fig"></div></div>
+<p>hidden lamp brightness</p><input type="range" min="0" max="100" value="0" oninput="fig.style.opacity=this.value/100">
+<p>slide it up. the ghost fades in. slide it down. gone.</p>
+<p>my notes: the stage lamp has to stay dim, or the glass just looks like glass.</p>
+</body></html>

@@ -1,0 +1,38 @@
+# ---- never, under any circumstances --------------------------------------
+# .env* covers .env and every stray copy of it. There was one called
+# .env.before-model-fix with a live key sitting in it.
+.env*
+!.env.example
+
+# ---- machine noise -------------------------------------------------------
+__pycache__/
+*.bak
+*.b4
+*.c4
+*.pregate
+*.prelook
+runs/
+cron.log
+deploy.log
+
+# ---- derived, and rebuildable --------------------------------------------
+# the extracted plain text of the books. the books themselves are kept.
+library/.text/
+
+# ---- big and append-only -------------------------------------------------
+# the debug log grows without limit and says nothing his memory does not.
+log.jsonl
+
+# ---- everything else is his, and goes in ---------------------------------
+# world/world.json          the world as it stands, including what he built
+# memory/*.jsonl            his notes, what he has seen, what he wants
+# memory/*.md               what he keeps and what he knows
+# memory/talk.jsonl         the letters between you
+# thoughts.jsonl            what he was thinking
+# inbox.jsonl, outbox.jsonl messages both ways
+# site/                     every page he has written, and his journal
+# state.json                where he is, and how he is
+*.bak2
+*.premsaa.bak
+*.prewalk.bak
+*.pretrees.bak
