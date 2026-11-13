@@ -773,3 +773,28 @@
 {"tick": 270, "kind": "world", "src": "examine", "text": "plank. came in the post."}
 {"tick": 270, "kind": "world", "src": "examine", "text": "a gap in the top corner. the hedge stops and starts again, and the grass between is worn flat."}
 {"tick": 270, "kind": "world", "src": "examine", "text": "the old wall. brick, mostly. one part has come down and nobody has put it back."}
+{"tick": 271, "kind": "world", "src": "examine", "text": "the old wall. brick, mostly. one part has come down and nobody has put it back."}
+{"tick": 271, "kind": "world", "src": "examine", "text": "a gap in the top corner. the hedge stops and starts again, and the grass between is worn flat."}
+{"tick": 271, "kind": "world", "src": "move", "text": "there is no gap_orchard."}
+{"tick": 271, "kind": "world", "src": "examine", "text": "not here."}
+{"tick": 271, "kind": "world", "src": "move", "text": "you are at top of the lane. cobbles, a drain he does not trust, his own front door on one side. here: something leaning against the end wall. ways out: house_main, lane_bottom, shop_general, orchard, restaurant, river_bank"}
+{"tick": 271, "kind": "world", "src": "examine", "text": "not here."}
+{"tick": 271, "kind": "world", "src": "move", "text": "you are at the orchard. four old pear trees in a row, further apart than they look from the lane. the ground is soft with fallen fruit and the wasps are busy. here: the first pear tree, the second pear tree, the third pear tree, the fourth pear tree, the old wall, a gap in the top corner. ways out: yard, lane_top, lane_out"}
+{"tick": 271, "kind": "world", "src": "examine", "text": "a gap in the top corner. the hedge stops and starts again, and the grass between is worn flat."}
+{"tick": 271, "kind": "world", "src": "use", "text": "not here."}
+{"tick": 271, "kind": "world", "src": "examine", "text": "not here."}
+{"tick": 271, "kind": "world", "src": "examine", "text": "the first pear tree. the oldest. leans south. the fruit at the top is always best and always out of reach."}
+{"tick": 271, "kind": "world", "src": "use", "text": "you get at one. it is a long way up and you come down faster than you went. the pear is worth it: sweet, and it runs down your chin."}
+{"tick": 271, "kind": "world", "src": "use", "text": "you climb up the broken part of the wall to look over into the next field with the old wall."}
+{"tick": 272, "kind": "world", "src": "examine", "text": "the old wall. brick, mostly. one part has come down and nobody has put it back."}
+{"tick": 272, "kind": "world", "src": "examine", "text": "a gap in the top corner. the hedge stops and starts again, and the grass between is worn flat."}
+{"tick": 272, "kind": "world", "src": "move", "text": "there is no gap_orchard."}
+{"tick": 272, "kind": "world", "src": "examine", "text": "the first pear tree. the oldest. leans south. the fruit at the top is always best and always out of reach."}
+{"tick": 272, "kind": "world", "src": "examine", "text": "driftwood caught on the bend. smooth, light, and already the right sort of shape for things."}
+{"tick": 273, "kind": "world", "src": "examine", "text": "the old wall. brick, mostly. one part has come down and nobody has put it back."}
+{"tick": 273, "kind": "world", "src": "examine", "text": "a gap in the top corner. the hedge stops and starts again, and the grass between is worn flat."}
+{"tick": 273, "kind": "world", "src": "examine", "text": "the first pear tree. the oldest. leans south. the fruit at the top is always best and always out of reach."}
+{"tick": 273, "kind": "world", "src": "examine", "text": "driftwood caught on the bend. smooth, light, and already the right sort of shape for things."}
+{"tick": 273, "kind": "world", "src": "move", "text": "there is no gap_orchard."}
+{"tick": 273, "kind": "world", "src": "examine", "text": "not here."}
+{"tick": 273, "kind": "world", "src": "examine", "text": "plank. came in the post."}
