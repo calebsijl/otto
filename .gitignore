@@ -36,3 +36,6 @@ log.jsonl
 *.premsaa.bak
 *.prewalk.bak
 *.pretrees.bak
+
+# python virtualenv, rebuilt by deploy.sh on the server (was 3,456 tracked files)
+venv/
