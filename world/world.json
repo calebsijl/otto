@@ -368,7 +368,7 @@
     "lane_out": {
       "name": "the way out of the village",
       "kind": "street",
-      "known": false,
+      "known": true,
       "pos": [
         -14,
         0,
@@ -382,14 +382,21 @@
       "exits": [
         "orchard",
         "church",
-        "town_road"
+        "town_road",
+        "station_road"
       ],
-      "description": "a track going away from the village, between hedges, uphill."
+      "description": "a track going away from the village, between hedges, uphill.",
+      "found": {
+        "how": "looked properly at a gap in the top corner",
+        "where": "orchard",
+        "at": "2026-11-11T17:09:40",
+        "tick": 148
+      }
     },
     "church": {
       "name": "the church",
       "kind": "civic",
-      "known": false,
+      "known": true,
       "pos": [
         -30,
         0,
@@ -402,7 +409,7 @@
       ],
       "exits": [
         "lane_out",
-        "station"
+        "station_road"
       ],
       "description": "a tower with a spire on it, and a long low part behind. the door is shut. you can see it from a long way off.",
       "style": "stone",
@@ -422,6 +429,12 @@
       },
       "lychgate": {
         "away": 9
+      },
+      "found": {
+        "how": "looked properly at something standing up above the trees",
+        "where": "lane_out",
+        "at": "2026-11-12T07:41:30",
+        "tick": 192
       }
     },
     "back_lane": {
@@ -626,7 +639,7 @@
         6
       ],
       "warmth": 0.3,
-      "known": false,
+      "known": true,
       "exits": [
         "lane_out",
         "town_t1",
@@ -635,7 +648,13 @@
         "town_square",
         "woods_new"
       ],
-      "description": "a street with shops down both sides and more people on it in one morning than the lane sees in a month. nobody here knows your name, which is strange and not entirely bad."
+      "description": "a street with shops down both sides and more people on it in one morning than the lane sees in a month. nobody here knows your name, which is strange and not entirely bad.",
+      "found": {
+        "how": "looked properly at a milestone",
+        "where": "lane_out",
+        "at": "2026-11-12T07:21:00",
+        "tick": 191
+      }
     },
     "town_square": {
       "name": "the square",
@@ -775,8 +794,7 @@
       ],
       "warmth": 0.35,
       "exits": [
-        "town_square",
-        "station"
+        "town_square"
       ],
       "description": "a roof on stone legs with nothing between them, so the weather comes through but the rain does not. trestles stacked against the end wall."
     },
@@ -786,21 +804,21 @@
       "pos": [
         -13,
         0,
-        -79
+        -92
       ],
       "size": [
-        22,
-        6,
-        13
+        24,
+        14,
+        18
       ],
       "warmth": 0.3,
-      "known": false,
+      "known": true,
       "exits": [
-        "church",
-        "town_t6"
+        "station_road"
       ],
-      "description": "a long low building with a canopy over a stone platform, and standing at the platform, an engine and two carriages that have not moved in a very long time. there is nobody here. the clock has stopped at twenty past four.",
-      "build": "station"
+      "description": "a long platform under an iron canopy, tiled in diamonds, with a roof that curves over and a row of columns holding it up that have ironwork spreading out of the top of them like fans. there is a clock on a bracket over the edge and a bigger one up the tower, and both of them are right. standing at the platform is one wooden carriage, varnished, with its windows still in it. there is no engine. there has not been an engine for a long time.",
+      "build": "station",
+      "scale": 0.5
     },
     "woods_new": {
       "name": "the woods",
@@ -820,6 +838,28 @@
         "town_road"
       ],
       "description": "proper trees, close together, and the light goes green and goes quiet. the ground is all needles and gives slightly under you."
+    },
+    "station_road": {
+      "name": "the station road",
+      "kind": "street",
+      "pos": [
+        -14,
+        0,
+        -69
+      ],
+      "size": [
+        6,
+        0,
+        28
+      ],
+      "warmth": 0.25,
+      "known": false,
+      "exits": [
+        "lane_out",
+        "station",
+        "church"
+      ],
+      "description": "the way out of the village, going on. past the church it stops being the way out of anywhere and becomes the way to one thing only. worn down the middle, a lamp at each end, and at the far end of it an archway through the middle of a building, with the platform straight through that."
     }
   },
   "objects": [
@@ -935,36 +975,6 @@
       "note": "whatever caleb has put there."
     },
     {
-      "id": "a_wooden_ruler_marked_in_mil_45",
-      "name": "a wooden ruler, marked in millimetres",
-      "place": "_carried",
-      "tags": [
-        "gift"
-      ],
-      "note": "came in the post.",
-      "from": "caleb"
-    },
-    {
-      "id": "a_wooden_ruler_marked_in_mil_45",
-      "name": "a wooden ruler, marked in millimetres",
-      "place": "post_office",
-      "tags": [
-        "gift"
-      ],
-      "note": "came in the post.",
-      "from": "caleb"
-    },
-    {
-      "id": "a_bundle_of_card_strips_all__45",
-      "name": "a bundle of card strips, all cut the same width",
-      "place": "post_office",
-      "tags": [
-        "gift"
-      ],
-      "note": "came in the post.",
-      "from": "caleb"
-    },
-    {
       "id": "pear_tree_a",
       "name": "the first pear tree",
       "place": "orchard",
@@ -1011,7 +1021,7 @@
     {
       "id": "windfalls",
       "name": "fallen pears in the grass",
-      "place": "_carried",
+      "place": "post_office",
       "tags": [
         "food",
         "infinite",
@@ -1170,7 +1180,7 @@
     {
       "id": "unknown_plant",
       "name": "a plant you do not know",
-      "place": "_carried",
+      "place": "post_office",
       "tags": [
         "fixed"
       ],
@@ -1258,16 +1268,6 @@
       "note": "stiffer than paper. cuts straight."
     },
     {
-      "id": "a_book_about_rivers_80",
-      "name": "a book about rivers",
-      "place": "library",
-      "tags": [
-        "gift"
-      ],
-      "note": "came in the post.",
-      "from": "caleb"
-    },
-    {
       "id": "shallows",
       "name": "the shallows at the top end",
       "place": "river",
@@ -1317,7 +1317,7 @@
     {
       "id": "driftwood",
       "name": "driftwood caught on the bend",
-      "place": "river_bank",
+      "place": "_carried",
       "tags": [
         "material",
         "gather"
@@ -1326,7 +1326,8 @@
       "at": [
         3.0,
         -16.0
-      ]
+      ],
+      "condition": 0.99
     },
     {
       "id": "back_wall",
@@ -1356,17 +1357,6 @@
       ]
     },
     {
-      "id": "the_leaning_thing",
-      "name": "something leaning against the end wall",
-      "place": "lane_top",
-      "tags": [
-        "fixed",
-        "strange"
-      ],
-      "shape": "tandem",
-      "note": "two rings, taller than you, one behind the other, held apart by a frame of thin bars. there are two seats along the top, one in front of the other, and two sets of bent handles. the rings turn when you push them and the whole thing wants to fall over. it is cold and it has been rained on. you have no idea what it is, what it is for, or who left it here."
-    },
-    {
       "id": "dish_a_bowl_of_leek_soup",
       "name": "a bowl of leek soup",
       "place": "restaurant",
@@ -1393,36 +1383,6 @@
       ],
       "price": 1,
       "note": "on today. it comes out hot and they put it down in front of you."
-    },
-    {
-      "id": "pencil_crayons_and_paper_53",
-      "name": "pencil, crayons, and paper",
-      "place": "_carried",
-      "tags": [
-        "gift"
-      ],
-      "note": "came in the post.",
-      "from": "caleb"
-    },
-    {
-      "id": "small_magnet_a_flat_battery__53",
-      "name": "small magnet, a flat battery, a roll of wire, and a push switch, soft bits of iron, card strips",
-      "place": "_carried",
-      "tags": [
-        "gift"
-      ],
-      "note": "came in the post.",
-      "from": "caleb"
-    },
-    {
-      "id": "_paint_teal_goes_6_a_heavy_c_27",
-      "name": "--paint teal --goes 6 a heavy can with a nozzle on the top",
-      "place": "_carried",
-      "tags": [
-        "gift"
-      ],
-      "note": "came in the post.",
-      "from": "caleb"
     },
     {
       "id": "cooking_slab",
@@ -1510,123 +1470,6 @@
       ],
       "shape": "glass",
       "note": "cold, flat, and held in a wooden frame. there is another washroom in it, the same as this one but turned the wrong way round, and when you move, something small and dark and spiked moves in there too, at exactly the same moment. it will not do anything you do not do first."
-    },
-    {
-      "id": "rapping_board_55",
-      "name": "rapping board",
-      "place": "post_office",
-      "tags": [
-        "rapping hand",
-        "electromagnet",
-        "build"
-      ],
-      "note": "a card strip tapper with a soft iron bit glued on its end, hanging over a wire coil on a core, wired to the battery through the push switch. push the switch, the coil pulls the iron, the strip taps.",
-      "made_by": "otto",
-      "shape": "slab",
-      "condition": 1.0
-    },
-    {
-      "id": "pear_pendulum_78",
-      "name": "pear pendulum",
-      "place": "library",
-      "tags": [],
-      "note": "a length of wire hung from a nail by the library shelf with a fallen pear tied at the bottom, and a pencil taped to the pear pointing down at a sheet of paper.",
-      "made_by": "otto",
-      "shape": "post",
-      "condition": 1.0
-    },
-    {
-      "id": "short_pendulum_ninth_86",
-      "name": "short_pendulum_ninth",
-      "place": "library",
-      "tags": [],
-      "note": "a short pendulum hung from the same beam as the pear pendulum, only 1/9 of its length, with a small weight. should swing three times to the pear's one (guess from sqrt rule, untested).",
-      "made_by": "otto",
-      "shape": "post"
-    },
-    {
-      "id": "telephone_receiver_93",
-      "name": "telephone receiver",
-      "place": "library",
-      "tags": [
-        "telephone",
-        "magnet",
-        "coil"
-      ],
-      "note": "a small tin can with my magnet standing upright in the bottom, wire wound round it, and a thin iron disc a hair above the end. two wire ends out the bottom. made from the telephone receiver page [55]. untested.",
-      "made_by": "otto",
-      "shape": "box"
-    },
-    {
-      "id": "rain_gauge_110",
-      "name": "rain gauge",
-      "place": "lane_bottom",
-      "tags": [
-        "gauge",
-        "open ground"
-      ],
-      "note": "a tin funnel draining into a narrow tube a tenth the area of the funnel top; stick marked in tenths",
-      "made_by": "otto",
-      "shape": "tube"
-    },
-    {
-      "id": "raw_steak_and_raw_milk_to_ea_68",
-      "name": "raw steak and raw milk to eat",
-      "place": "post_office",
-      "tags": [
-        "gift"
-      ],
-      "note": "came in the post.",
-      "from": "caleb"
-    },
-    {
-      "id": "flat_batteries_black_paint_b_69",
-      "name": "flat batteries, black paint, blue paint, pink paint, clear sheets",
-      "place": "_carried",
-      "tags": [
-        "gift"
-      ],
-      "note": "came in the post.",
-      "from": "caleb"
-    },
-    {
-      "id": "ghost_box_115",
-      "name": "ghost_box",
-      "place": "lane_bottom",
-      "tags": [
-        "pepper's ghost",
-        "black"
-      ],
-      "note": "a small open-fronted box painted dull black inside, with a slanted clear sheet across it, a hidden figure in a side chamber, two lamps (one lit at a time to fade the ghost in and out)",
-      "made_by": "otto",
-      "shape": "box"
-    },
-    {
-      "id": "paddle_wheel_124",
-      "name": "paddle_wheel",
-      "place": "wharf",
-      "tags": [
-        "water",
-        "wheel",
-        "stream"
-      ],
-      "note": "small paddle wheel of card strips on a pencil axle, set in the stream so the running water pushes the paddles round",
-      "made_by": "otto",
-      "shape": "wheel",
-      "at": [
-        0.8,
-        -3.0
-      ]
-    },
-    {
-      "id": "pears_72",
-      "name": "pears",
-      "place": "post_office",
-      "tags": [
-        "gift"
-      ],
-      "note": "came in the post.",
-      "from": "caleb"
     },
     {
       "name": "a coil of thin wire",
@@ -1851,9 +1694,9 @@
       "tags": [
         "fixed"
       ],
-      "note": "a wooden board with paper under glass, gone brown, listing times in two columns. whatever it is listing times for is behind the church and nobody has changed the paper in years.",
+      "note": "a wooden board with paper under glass, gone brown, listing times in two columns. there is a road going on past the church, and whatever these times are for is up it.",
       "shape": "slab",
-      "reveals": "station"
+      "reveals": "station_road"
     },
     {
       "id": "plank_offcuts",
@@ -1879,12 +1722,10 @@
         -1.4
       ],
       "tags": [
-        "shop",
         "material",
-        "infinite"
+        "fixed"
       ],
-      "note": "black, sticky, and it smells like a road in summer. it goes on the outside of a hull so the water stays on the outside too.",
-      "price": 1,
+      "note": "black, sticky, and it smells like a road in summer. it goes on the outside of a hull so the water stays on the outside too. it is behind the counter, and nobody has said a price. you could stand and look at it for a while, which is what you do.",
       "shape": "box"
     },
     {
@@ -1926,12 +1767,10 @@
         1.6
       ],
       "tags": [
-        "shop",
         "material",
-        "infinite"
+        "fixed"
       ],
-      "note": "thin square sticks, all cut the same length and tied with twine. the most useful shape there is.",
-      "price": 1,
+      "note": "thin square sticks, all cut the same length and tied with twine. the most useful shape there is. it is behind the counter, and nobody has said a price. you could stand and look at it for a while, which is what you do.",
       "shape": "beam"
     },
     {
@@ -1975,12 +1814,10 @@
         -1.8
       ],
       "tags": [
-        "shop",
         "material",
-        "infinite"
+        "fixed"
       ],
-      "note": "flat, cold, sharp at the edges, and the room looks slightly wrong through them. you would have to be careful with these.",
-      "price": 2,
+      "note": "flat, cold, sharp at the edges, and the room looks slightly wrong through them. you would have to be careful with these. it is behind the counter, and nobody has said a price. you could stand and look at it for a while, which is what you do.",
       "shape": "sheet"
     },
     {
@@ -2034,12 +1871,10 @@
         -1.6
       ],
       "tags": [
-        "shop",
         "material",
-        "infinite"
+        "fixed"
       ],
-      "note": "sorted by length into wooden compartments. there are more sizes of nail in this tray than you knew there were sizes of anything.",
-      "price": 1,
+      "note": "sorted by length into wooden compartments. there are more sizes of nail in this tray than you knew there were sizes of anything. it is behind the counter, and nobody has said a price. you could stand and look at it for a while, which is what you do.",
       "shape": "pile"
     },
     {
@@ -2051,12 +1886,10 @@
         -1.9
       ],
       "tags": [
-        "shop",
         "material",
-        "infinite"
+        "fixed"
       ],
-      "note": "grey and soft, wound on a wooden spool. it bends where you bend it and then it stays bent.",
-      "price": 1,
+      "note": "grey and soft, wound on a wooden spool. it bends where you bend it and then it stays bent. it is behind the counter, and nobody has said a price. you could stand and look at it for a while, which is what you do.",
       "shape": "rope"
     },
     {
@@ -2096,12 +1929,10 @@
         1.7
       ],
       "tags": [
-        "shop",
         "material",
-        "infinite"
+        "fixed"
       ],
-      "note": "white sheets cut square and stacked, more than you could cover in a year of writing.",
-      "price": 1,
+      "note": "white sheets cut square and stacked, more than you could cover in a year of writing. it is behind the counter, and nobody has said a price. you could stand and look at it for a while, which is what you do.",
       "shape": "sheet"
     },
     {
@@ -2113,12 +1944,10 @@
         1.5
       ],
       "tags": [
-        "shop",
         "material",
-        "infinite"
+        "fixed"
       ],
-      "note": "thick black stuff, not runny the way you expected. it goes onto the roller, never onto the paper.",
-      "price": 1,
+      "note": "thick black stuff, not runny the way you expected. it goes onto the roller, never onto the paper. it is behind the counter, and nobody has said a price. you could stand and look at it for a while, which is what you do.",
       "shape": "box"
     },
     {
@@ -2130,12 +1959,10 @@
         -1.7
       ],
       "tags": [
-        "shop",
         "material",
-        "infinite"
+        "fixed"
       ],
-      "note": "wheels with teeth round the edge, every one a different size, lying loose in a tray like coins. they are made to turn each other.",
-      "price": 1,
+      "note": "wheels with teeth round the edge, every one a different size, lying loose in a tray like coins. they are made to turn each other. it is behind the counter, and nobody has said a price. you could stand and look at it for a while, which is what you do.",
       "shape": "pile"
     },
     {
@@ -2147,12 +1974,10 @@
         -1.5
       ],
       "tags": [
-        "shop",
         "material",
-        "infinite"
+        "fixed"
       ],
-      "note": "a flat ribbon of steel wound tight into a drum. it wants to come undone, and it will, for days, if it is let out slowly enough.",
-      "price": 2,
+      "note": "a flat ribbon of steel wound tight into a drum. it wants to come undone, and it will, for days, if it is let out slowly enough. it is behind the counter, and nobody has said a price. you could stand and look at it for a while, which is what you do.",
       "shape": "rope"
     },
     {
@@ -2178,11 +2003,9 @@
         -1.6
       ],
       "tags": [
-        "shop",
-        "infinite"
+        "fixed"
       ],
-      "note": "a metal tube with six holes down it. you can get a noise out of it straight away and a tune out of it eventually.",
-      "price": 1,
+      "note": "a metal tube with six holes down it. you can get a noise out of it straight away and a tune out of it eventually. it is behind the counter, and nobody has said a price. you could stand and look at it for a while, which is what you do.",
       "shape": "tube"
     },
     {
@@ -2194,12 +2017,10 @@
         -1.4
       ],
       "tags": [
-        "shop",
         "material",
-        "infinite"
+        "fixed"
       ],
-      "note": "wire wound on a paper card. they are sold to be played, but they are also simply very good string.",
-      "price": 1,
+      "note": "wire wound on a paper card. they are sold to be played, but they are also simply very good string. it is behind the counter, and nobody has said a price. you could stand and look at it for a while, which is what you do.",
       "shape": "rope"
     },
     {
@@ -2571,83 +2392,149 @@
       "note": "a long bed cut into the grass on the path side, planted in rows and weeded by somebody who has not given up. there is something out in every month of the year, which cannot be an accident."
     },
     {
-      "id": "dead_train",
-      "name": "the engine",
+      "id": "road_lamp_0",
+      "name": "a lamp on the station road",
+      "place": "station_road",
+      "at": [
+        2.0,
+        -11.5
+      ],
+      "shape": "lamppost",
+      "face": 0,
+      "tags": [
+        "fixed",
+        "warm"
+      ],
+      "note": "the same cast post as the ones on the river walk. somebody still lights this road, for the people who would be coming up it."
+    },
+    {
+      "id": "road_lamp_1",
+      "name": "a lamp on the station road",
+      "place": "station_road",
+      "at": [
+        2.0,
+        11.5
+      ],
+      "shape": "lamppost",
+      "face": 0,
+      "tags": [
+        "fixed",
+        "warm"
+      ],
+      "note": "the same cast post as the ones on the river walk. somebody still lights this road, for the people who would be coming up it."
+    },
+    {
+      "id": "the_carriage",
+      "name": "the carriage",
       "place": "station",
       "at": [
-        6.0,
-        4.0
+        -0.5,
+        -3.2
       ],
-      "shape": "deadtrain",
+      "shape": "nothing",
       "face": 0,
       "tags": [
         "fixed"
       ],
-      "note": "black, and taller than the church door, standing at the platform with its tender and two carriages behind it. cold all the way through. the stack is split open and something is nesting in it, a wheel is off and lying in the ballast, and the last carriage has gone into the ground up to its windows. there is grass growing between the rails underneath it, which tells you how long it has been since anybody needed it to go anywhere.",
-      "solid": true
+      "note": "wooden, and varnished so dark it is nearly red. ten tall windows down the side with smaller ones above them, a roof that rises in the middle into a second little roof with its own windows, and an open platform at each end with a curved rail round it and steps down to the ballast. there is a wheel on a stand at one end for the brake. nothing is coupled to it and nothing ever will be."
     },
     {
-      "id": "stopped_clock",
-      "name": "the station clock",
+      "id": "station_clock",
+      "name": "the clock on the tower",
       "place": "station",
       "at": [
-        -7.0,
-        1.3
+        -9.8,
+        5.0
       ],
-      "shape": "stationclock",
-      "face": -1.5708,
+      "shape": "nothing",
+      "face": 0,
       "tags": [
         "fixed"
       ],
-      "note": "on a bracket at the platform edge, with the hands at twenty past four. it is wrong twice a day and right twice a day and nobody has wound it either way."
+      "note": "white face, black hands, four of them so it can be read from anywhere. it has not stopped.",
+      "tells_time": true
+    },
+    {
+      "id": "platform_clock",
+      "name": "the clock over the platform edge",
+      "place": "station",
+      "at": [
+        3.0,
+        -1.2
+      ],
+      "shape": "nothing",
+      "face": 0,
+      "tags": [
+        "fixed"
+      ],
+      "note": "hung off a bracket so it faces both ways down the platform, for people who are not here.",
+      "tells_time": true
     },
     {
       "id": "platform_bench",
       "name": "a bench on the platform",
       "place": "station",
       "at": [
-        -2.0,
-        -0.8
+        -1.2,
+        3.0
       ],
-      "shape": "bench",
-      "face": -1.5708,
+      "shape": "nothing",
+      "face": 0,
       "tags": [
         "sit",
         "fixed"
       ],
-      "note": "cast ends and wooden slats, facing the empty rails. somebody sat here a long time ago waiting for this."
+      "note": "cast ends and wooden slats, looking at the rails. somebody sat here a long time ago waiting for this."
     },
     {
-      "id": "station_lamp_a",
-      "name": "a lamp on the platform",
-      "place": "station",
+      "id": "box_letter",
+      "name": "a letter on top of the box",
+      "place": "lane_bottom",
       "at": [
-        3.0,
-        -0.9
+        1.4,
+        -2.2
       ],
-      "shape": "lamppost",
       "face": 0,
       "tags": [
-        "fixed",
-        "warm"
+        "fixed"
       ],
-      "note": "the same cast post as the ones down on the river walk, and it still comes up at dusk, over a platform nobody stands on."
+      "note": "one sheet, weighted down with a stone, in a hand that slopes. it says: THIS BOX IS HOW IT WORKS HERE. put a thing you have made through the slot and leave it. do not wait about. somebody will want it, and somebody will leave what they think it was worth, and that is what you will find in the bottom next time you look. a thing that actually works is worth more than a thing that only looks like it. nobody checks and nobody is watching. it has gone on like this for longer than anyone remembers."
     },
     {
-      "id": "station_lamp_b",
-      "name": "a lamp on the platform",
-      "place": "station",
-      "at": [
-        -9.0,
-        -0.9
+      "id": "pencil_55",
+      "name": "a pencil",
+      "place": "_carried",
+      "tags": [],
+      "price": 1,
+      "note": ""
+    },
+    {
+      "id": "plank_127",
+      "name": "plank",
+      "place": "_carried",
+      "tags": [
+        "gift"
       ],
-      "shape": "lamppost",
-      "face": 0,
+      "note": "came in the post.",
+      "from": "caleb",
+      "condition": 0.99
+    },
+    {
+      "id": "the_leaning_thing",
+      "name": "something leaning against the end wall",
+      "place": "lane_top",
       "tags": [
         "fixed",
-        "warm"
+        "strange",
+        "ride"
       ],
-      "note": "the far one. between the two of them the platform is lit all night for nobody at all."
+      "shape": "tandem",
+      "at": [
+        -3.0,
+        -1.0
+      ],
+      "face": 0,
+      "note": "two rings, taller than you, one behind the other, held apart by a frame of thin bars. there are two seats along the top, one in front of the other, and two sets of bent handles. the rings turn when you push them and the whole thing wants to fall over. it is cold and it has been rained on. you have no idea what it is, what it is for, or who left it here."
     }
   ],
   "tree_scale": 1.0

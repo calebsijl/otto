@@ -159,7 +159,34 @@ def first_line(text):
     return t[:150].strip()
 
 
-def describe(calls, state):
+def pretty_id(s):
+    """An id nobody should have had to read, turned back into words.
+
+    He addresses things by id, so the bar was showing the likes of
+    "_paint_teal_goes_6_a_heavy_c_27" when what he was doing was using the
+    teal paint. If the thing still exists we use its real name; this is the
+    fallback for when it does not."""
+    s = str(s or "").strip("_")
+    s = re.sub(r"_\d+$", "", s)          # the number the id generator tacks on
+    s = s.replace("_", " ").strip()
+    return s
+
+
+def name_of(what, world):
+    """What he would call it, rather than what the file calls it."""
+    what = str(what or "")
+    if not what or world is None:
+        return pretty_id(what) if what else ""
+    for o in world.get("objects", []):
+        if o.get("id") == what:
+            return o.get("name") or pretty_id(what)
+    pl = world.get("places", {}).get(what)
+    if pl:
+        return pl.get("name") or pretty_id(what)
+    return what if " " in what else pretty_id(what)
+
+
+def describe(calls, state, world=None):
     """The last call with a look to it, as a phrase. None if nothing shows."""
     out = None
     for c in calls:
@@ -170,6 +197,10 @@ def describe(calls, state):
             what = c["input"].get("name") or c["input"].get("object") or ""
         else:
             what = c["input"].get(key, "") if key else ""
+        # places, objects and books get their own names back. free text (a
+        # search, a wish, a thought) is already words and is left alone.
+        if c["name"] in ("move", "examine", "use", "take", "test", "edit_world"):
+            what = name_of(what, world)
         out = {"verb": verb, "what": str(what or "")[:70], "clock": state["clock"],
                "why": str(c.get("why") or "")[:160]}
     return out
@@ -431,10 +462,22 @@ def main():
         unread = [m for m in seen if not m.get("read")]
         from engine import SEEN as _SEEN, TALK as _TALK
         for m in unread:
-            jappend(_SEEN, {"tick": state["tick"], "kind": "caleb",
-                            "src": "message", "text": m["text"]})
-            jappend(_TALK, {"who": "caleb", "t": m.get("t", state["clock"]),
-                            "tick": state["tick"], "text": m["text"]})
+            who = m.get("who", "caleb")
+            if m.get("trusted") or who == "caleb":
+                jappend(_SEEN, {"tick": state["tick"], "kind": "caleb",
+                                "src": "message", "text": m["text"]})
+                jappend(_TALK, {"who": "caleb", "t": m.get("t", state["clock"]),
+                                "tick": state["tick"], "text": m["text"]})
+            else:
+                # somebody passing through. anybody can type any name, so he is
+                # told the name is only claimed, and it stays out of the letters
+                # between him and caleb, which are a different thing.
+                jappend(_SEEN, {"tick": state["tick"], "kind": "stranger",
+                                "src": f"a note from {who}",
+                                "text": (f'somebody who gave their name as "{who}" '
+                                         f'left you a note. you have never met them '
+                                         f'and nothing proves the name is theirs. '
+                                         f'they said: {m["text"]}')})
         # Most ticks are small: walking about, eating, looking at things. Those do
         # not need the expensive model. The ones that do are when something has
         # hold of him, when you have said something, or every so often regardless
@@ -521,11 +564,11 @@ def main():
             m["read"] = True
         INBOX.write_text("".join(json.dumps(m) + "\n" for m in seen))
         if seen:                       # these were unread until this tick
-            state["because_of"] = {"who": "caleb",
+            state["because_of"] = {"who": seen[-1].get("who", "caleb"),
                                    "text": str(seen[-1].get("text") or "")[:160],
                                    "at": state["clock"]}
 
-        state["doing"] = describe(calls, state) or state.get("doing") \
+        state["doing"] = describe(calls, state, world) or state.get("doing") \
                          or {"verb": "idle", "what": "", "clock": state["clock"]}
 
         jsave(STATE, state); jsave(WORLD, world)

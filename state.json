@@ -1,39 +1,35 @@
 {
   "name": "otto",
   "species": "hedgehog",
-  "tick": 195,
-  "clock": "2026-11-02T11:48:56",
-  "real": "2026-11-02T11:48:56",
-  "asleep": false,
+  "tick": 235,
+  "clock": "2026-11-12T21:13:48",
+  "real": "2026-11-12T21:13:48",
+  "asleep": true,
   "needs": {
-    "energy": 0.49017149284050004,
-    "fullness": 0.7024232081333331,
-    "warmth": 0.02441588047733495,
-    "calm": 0.6709356479229995,
-    "wonder": 0.06399786248239953
+    "energy": 0.33052135919849984,
+    "fullness": 0.7939166288233331,
+    "warmth": 0.6212366839655633,
+    "calm": 0.47803124488821325,
+    "wonder": 0.026988006106702683
   },
-  "location": "stream",
+  "location": "house_back",
   "carrying": [
-    "pencil_crayons_and_paper_53",
-    "small_magnet_a_flat_battery__53",
-    "_paint_teal_goes_6_a_heavy_c_27",
-    "windfalls",
-    "flat_batteries_black_paint_b_69",
-    "unknown_plant"
+    "pencil_55",
+    "driftwood",
+    "plank_127"
   ],
-  "coins": 8,
+  "coins": 3,
   "doing": {
-    "verb": "using",
-    "what": "_paint_teal_goes_6_a_heavy_c_27",
-    "clock": "2026-11-02T11:48:56",
-    "why": ""
+    "verb": "asleep",
+    "what": "",
+    "clock": "2026-11-12T21:05:02"
   },
   "weather": "",
-  "mood": "restless",
-  "since_deep": 0,
+  "mood": "settled",
+  "since_deep": 2,
   "because_of": {
     "who": "caleb",
-    "text": "the smallest depth is 1 mm",
-    "at": "2026-11-02T11:48:56"
+    "text": "i sent you a plank",
+    "at": "2026-11-12T20:33:50"
   }
 }

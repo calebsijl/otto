@@ -27,7 +27,8 @@ if [ "$LIVES" = "yes" ] && [ "$RESET" -eq 0 ]; then
   echo "==> he is already living up there. updating his code, leaving his life alone."
   echo "    (his memory, world, pages, journal and clock stay as they are)"
   KEEP=(--exclude 'memory/' --exclude 'world/world.json' --exclude 'state.json'
-        --exclude 'site/journal.md' --exclude 'inbox.jsonl' --exclude 'outbox.jsonl'
+        --exclude 'site/journal.md' --exclude 'site/*.md' --exclude 'site/*.txt'
+        --exclude 'inbox.jsonl' --exclude 'outbox.jsonl'
         --exclude 'log.jsonl' --exclude 'thoughts.jsonl' --exclude '.env')
 else
   if [ "$RESET" -eq 1 ]; then
@@ -93,6 +94,10 @@ Description=otto's console
 After=network.target
 [Service]
 WorkingDirectory=$HOME/otto
+# serve.py reads OTTO_KEY straight out of the environment, and without this
+# line it never sees the one in .env, so writing stayed open to anybody who
+# could reach the address.
+EnvironmentFile=-$HOME/otto/.env
 ExecStart=$PY_BIN $HOME/otto/serve.py
 Restart=always
 RestartSec=3

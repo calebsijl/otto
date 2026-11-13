@@ -8,6 +8,83 @@ PORT = int(sys.argv[1]) if len(sys.argv) > 1 else int(os.environ.get("PORT", 808
 BIND = os.environ.get("OTTO_BIND", "")          # "" = every interface
 KEY  = os.environ.get("OTTO_KEY", "")           # set it and only you can write
 
+def parse_parcel(raw):
+    """The box takes the same flags parcel.py does. Typed into the web box they
+    used to end up inside the name, which is how he came to be carrying a thing
+    called "--paint teal --goes 6 a heavy can with a nozzle on the top" that did
+    not paint anything."""
+    s = str(raw or "").strip()
+    colour, goes = None, 6
+    m = re.search(r"--paint\s+(\S+)", s)
+    if m:
+        colour = m.group(1).strip('"\'')
+        s = s[:m.start()] + s[m.end():]
+    m = re.search(r"--goes\s+(\d+)", s)
+    if m:
+        goes = max(1, int(m.group(1)))
+        s = s[:m.start()] + s[m.end():]
+    s = re.sub(r"--\S+", "", s)
+    return " ".join(s.split()), colour, goes
+
+
+VISITORS = HERE / "memory" / "visitors.json"
+PER_DAY  = 3
+NAME_OK  = re.compile(r"^[A-Za-z0-9][A-Za-z0-9 ._-]{0,19}$")
+
+def clean_name(raw):
+    """A name somebody typed. Not an account: nobody owns it, so the only one
+    that is actually checked is caleb's, which needs the key."""
+    n = " ".join(str(raw or "").split())[:20].strip()
+    if not n or not NAME_OK.match(n):
+        return ""
+    if n.lower() in ("caleb", "otto"):
+        return ""
+    return n
+
+def quota_take(ip):
+    """Three a day, counted against the address it came from. Returns how many
+    are left after this one, or None if they have had their three."""
+    import datetime as _dt
+    today = _dt.date.today().isoformat()
+    try:
+        book = json.loads(VISITORS.read_text())
+    except Exception:
+        book = {}
+    book = {today: book.get(today, {})}          # yesterday is nobody's business
+    used = int(book[today].get(ip, 0))
+    if used >= PER_DAY:
+        return None
+    book[today][ip] = used + 1
+    VISITORS.parent.mkdir(parents=True, exist_ok=True)
+    VISITORS.write_text(json.dumps(book))
+    return PER_DAY - (used + 1)
+
+
+def his_page(p):
+    """Did he write this? The folder also holds the machinery that draws his
+    world and every backup copy of it, none of which he has ever touched, and
+    all of which were being listed under "what he has made"."""
+    if not p.is_file():
+        return False
+    n = p.name
+    if n in ("console.html", "world.html", "look.js", "otto.glb"):
+        return False
+    if n.startswith(".") or ".bak" in n:
+        return False
+    return p.suffix in (".md", ".html", ".txt")
+
+
+BLOCKED_SUFFIX = (".bak", ".bak2", ".py", ".sh", ".log", ".jsonl", ".env")
+def servable(rel):
+    """Pages he wrote and the machinery that draws his world. Nothing else:
+    not the backups, not the source, not anything beginning with a dot."""
+    if not rel or rel.startswith(".") or "/." in rel or ".." in rel:
+        return False
+    if ".bak" in rel:
+        return False
+    return not rel.endswith(BLOCKED_SUFFIX)
+
+
 def jlines(p, limit=None):
     if not p.exists():
         return []
@@ -98,8 +175,7 @@ def feed():
         for block in jp.read_text().split("\n## ")[1:]:
             head, _, body = block.partition("\n")
             entries.append({"when": head.strip(), "text": body.strip()})
-    pages = sorted(p.name for p in SITE.iterdir() if p.is_file() and p.name not in
-                   ("console.html","world.html")) if SITE.exists() else []
+    pages = sorted(p.name for p in SITE.iterdir() if his_page(p)) if SITE.exists() else []
     knows = (HERE/"memory"/"knows.md")
     return {
       "state": state,
@@ -164,22 +240,44 @@ class H(http.server.SimpleHTTPRequestHandler):
         except json.JSONDecodeError: data={}
         clock=json.loads((HERE/"state.json").read_text()).get("clock","") \
               if (HERE/"state.json").exists() else ""
-        if not self._may_write(data):
-            return self._send({"ok":False,"error":"read only. only caleb can send him things."})
+        mine = self._may_write(data)
         if self.path=="/api/say":
-            text=(data.get("text") or "").strip()
+            text=(data.get("text") or "").strip()[:280]
             if not text: return self._send({"ok":False,"error":"nothing to say"})
+            if mine:
+                who, trusted, left = "caleb", True, None
+            else:
+                # anybody may talk to him. three a day each, and they have to
+                # say who they are. the name is not checked against anything,
+                # which is why it is marked as only claimed when he reads it.
+                who = clean_name(data.get("name"))
+                if not who:
+                    return self._send({"ok":False,
+                        "error":"put a name in first. letters and numbers, up to twenty."})
+                left = quota_take(self.client_address[0])
+                if left is None:
+                    return self._send({"ok":False,
+                        "error":"that is your three for today. he is slow to answer anyway."})
+                trusted = False
             with (HERE/"inbox.jsonl").open("a") as f:
-                f.write(json.dumps({"t":clock,"text":text,"read":False,
+                f.write(json.dumps({"t":clock,"text":text,"read":False,"who":who,
+                                    "trusted":trusted,
                                     "sent":datetime.datetime.now().isoformat(timespec="seconds")})+"\n")
-            return self._send({"ok":True})
+            return self._send({"ok":True,"left":left,"who":who})
+        if not mine:
+            return self._send({"ok":False,"error":"read only. only caleb can send him things."})
         if self.path=="/api/parcel":
-            name=(data.get("name") or "").strip()
+            name, colour, goes = parse_parcel(data.get("name"))
             if not name: return self._send({"ok":False,"error":"no name"})
             wp=HERE/"world"/"world.json"; w=json.loads(wp.read_text())
             oid=re.sub(r"[^a-z0-9]+","_",name.lower())[:28]+f"_{len(w['objects'])}"
-            w["objects"].append({"id":oid,"name":name,"place":"post_office",
-                                 "tags":["gift"],"note":"came in the post.","from":"caleb"})
+            thing={"id":oid,"name":name,"place":"post_office",
+                   "tags":["gift"],"note":"came in the post.","from":"caleb"}
+            if colour:                       # same as parcel.py does it
+                thing["tags"].append("paint")
+                thing["colour"]=colour
+                thing["left"]=goes
+            w["objects"].append(thing)
             wp.write_text(json.dumps(w,indent=2))
             with (HERE/"inbox.jsonl").open("a") as f:
                 f.write(json.dumps({"t":clock,"text":"there is a parcel for you at the post office.",
@@ -187,21 +285,40 @@ class H(http.server.SimpleHTTPRequestHandler):
             return self._send({"ok":True})
         self.send_error(404)
 
+    def _miss(self):
+        self.send_response(404)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        body = b"<p>nothing here.</p>"
+        self.send_header("Content-Length", str(len(body))); self.end_headers()
+        self.wfile.write(body)
+
     def do_GET(self):
         rel=self.path.lstrip("/").split("?")[0]
         if rel=="api/feed": return self._send(feed())
         if rel in ("world.json","state.json"):
             src=(HERE/"world"/"world.json") if rel=="world.json" else (HERE/"state.json")
             if src.exists(): return self._send(src.read_bytes())
-        if rel=="": rel="console.html"
+        # the front door is the world, not a list of his files. it used to
+        # rewrite rel to console.html and then hand the untouched path to the
+        # base handler, which answered "/" with a directory listing of
+        # everything in site/, backups included.
+        if rel=="": rel="world.html"
+        if not servable(rel): return self._miss()
         p=SITE/rel
         if p.is_dir(): p=p/"index.md"
         if not p.exists() and (SITE/(rel+".md")).exists(): p=SITE/(rel+".md")
         if p.suffix==".md" and p.exists():
             return self._send(SHELL.format(t=p.stem,b=md(p.read_text())),"text/html; charset=utf-8")
-        if not p.exists() and rel=="console.html":
-            return self._send("<p>console.html is missing from site/</p>","text/html")
+        if not p.exists() or p.is_dir(): return self._miss()
+        try:
+            inside = p.resolve().relative_to(SITE.resolve())
+        except ValueError:
+            return self._miss()                      # no climbing out of site/
+        self.path = "/" + str(inside)                # serve what we resolved
         return super().do_GET()
+
+    def list_directory(self, path):
+        self._miss(); return None                    # never, under any circumstances
 
 SITE.mkdir(exist_ok=True)
 socketserver.TCPServer.allow_reuse_address=True

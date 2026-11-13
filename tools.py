@@ -208,6 +208,12 @@ def run(name, args, state, world):
         if o and o.get("place") in (loc, "_carried"):
             wonder_up(n, 0.02)
             out = f"{o['name']}. {o.get('note') or 'nothing you had not noticed.'}"
+            # a clock is the one object that answers differently every time you
+            # look at it. this is how he finds out what hour it is: by walking
+            # up to the station and reading it, the way anybody would.
+            if o.get("tells_time"):
+                when = datetime.datetime.fromisoformat(state["clock"])
+                out += f" it says {when.hour:02d}:{when.minute:02d}."
             # some things are a way of finding out somewhere else is there
             tgt = o.get("reveals")
             tp = world["places"].get(tgt) if tgt else None
@@ -228,6 +234,11 @@ def run(name, args, state, world):
         o = obj_by_id(world, args["object"])
         if not o or o.get("place") != loc:
             return "not here."
+        if "fixed" in o.get("tags", []):
+            # the vice is bolted to the counter, the press weighs as much as a
+            # cart, the clock is on a bracket twenty feet up. none of it was
+            # ever meant to be pocketable, and nothing was stopping him.
+            return f"{o['name']} is not going anywhere. it is part of the place."
         if "gather" in o.get("tags", []) and world["places"].get(loc, {}).get("kind") == "earth" \
            and random.random() < 0.45:
             state["grubby"] = True
@@ -292,6 +303,28 @@ def run(name, args, state, world):
         if not o or o.get("place") not in (loc, "_carried"):
             return "not here."
         tags = o.get("tags", [])
+
+        # Something he can get on top of. Only when he is actually trying to,
+        # so that pushing the rings or looking underneath still goes to the
+        # referee and gets judged properly.
+        if "ride" in tags:
+            want = (args.get("intent") or "").lower()
+            if any(k in want for k in ("sit", "climb", "get on", "getting on",
+                                       "ride", "riding", "on top", "mount",
+                                       "straddle", "stand on")):
+                if state.get("riding") == o["id"]:
+                    state["riding"] = None
+                    o["place"] = loc
+                    return (f"you get down. {o['name']} stands where you left it, "
+                            "and the rings go on turning for a second after you stop.")
+                state["riding"] = o["id"]
+                o["place"] = "_carried"
+                n["energy"] = clamp(n["energy"] - 0.02)
+                wonder_up(n, 0.10)
+                return (f"you get up on top of {o['name']}. it takes your weight and "
+                        "rolls, and it goes where you lean. the rings at the back turn "
+                        "when the ones at the front do, and the second seat behind you "
+                        "stays empty the whole time.")
 
         if "hob" in tags:
             # Two steps, and he has to work both of them out. Wood in the hatch
