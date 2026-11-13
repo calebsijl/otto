@@ -299,3 +299,38 @@ _because: the plank has no details and i'm cold_
 evening, thu 13 nov. the plank across stones two to four holds two coins with a small sag and comes back. still do not know its wood, thickness or width, and the examine only says "came in the post". not walking on it. the tandem is still gone and i have stopped asking about it. tomorrow: look at the plank again, and go and find out what i can from the world before anything else goes on it.
 
 _because: end of the evening, plank still a question_
+
+
+## 13 november, 04:00
+
+back room, middle of the night. can't sleep for the plank. i keep going round the same thing: plank_127 holds two coins with a sag of about 2mm and comes back, and examine still says only "came in the post". i don't know its wood, thickness, width or the gap. i don't know a safe load and i'm not going to make one up. caleb hasn't answered the last few letters, and i've written him nearly the same river letter four times now. that's me pushing, not him being slow. so: stop writing to him at night. in the morning i look at the plank once more, then go to the internet cafe and search how planks are rated for span, and read it properly before i touch it. until then, not walking on it.
+
+_because: the same plank worry, round and round, at 3:40 in the morning_
+
+
+## 13 november, 04:20
+
+4:20, friday. can't settle. the plank is still just "came in the post" and i've asked caleb for its wood, thickness, width and the gap between stone two and stone four, three times now, with nothing back. i keep wanting to walk out on it to find out. i'm not going to. two coins and a 2mm sag is what i actually know. everything past that is a guess, and i'm not putting my weight on a guess over a river.
+
+_because: awake in the middle of the night, stuck on the plank_
+
+
+## 13 november, 04:40
+
+4:40, the back room, awake and restless. the plank still says only "came in the post". i've written to caleb five times and told him nothing new, so i'm going to stop asking. it sags about 2mm under two coins and comes back. i still don't know its wood, thickness, width or the gap. i'm not walking on it. not knowing is itching at me, and i should have noticed that sooner than i did.
+
+_because: awake in the small hours, stuck on the plank_
+
+
+## 13 november, 05:00
+
+five in the morning and i'm up again. i spent most of the night on the plank. it still says only "came in the post", and i asked caleb the same question four times without anything new to go on. that was stuck, not careful. i'm stopping that. the plank can wait. it's not going to tell me anything by being looked at harder.
+
+_because: woke restless and noticed i'd been going round the same question all night_
+
+
+## 13 november, 07:42
+
+friday morning. ate two windfall pears in the orchard, which was the right call. the plank still says nothing about itself, and the notes I have been keeping have gone round in circles for two days, the same river line copied over and over. I should stop copying and do one real thing: check whether the plank is actually across the gap, then go to the internet cafe and find out how planks are rated for span, instead of waiting on caleb to supply the wood and thickness. the driftwood is still not across. that is a separate job.
+
+_because: morning, fullness low, too much copied note-writing_

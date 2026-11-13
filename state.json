@@ -1,18 +1,18 @@
 {
   "name": "otto",
   "species": "hedgehog",
-  "tick": 235,
-  "clock": "2026-11-12T21:13:48",
-  "real": "2026-11-12T21:13:48",
-  "asleep": true,
+  "tick": 270,
+  "clock": "2026-11-13T08:53:59",
+  "real": "2026-11-13T08:53:59",
+  "asleep": false,
   "needs": {
-    "energy": 0.33052135919849984,
-    "fullness": 0.7939166288233331,
-    "warmth": 0.6212366839655633,
-    "calm": 0.47803124488821325,
-    "wonder": 0.026988006106702683
+    "energy": 0.9361309472114999,
+    "fullness": 0.97492683828,
+    "warmth": 0.40429809792056587,
+    "calm": 0.6394716712872472,
+    "wonder": 0.27403760852989234
   },
-  "location": "house_back",
+  "location": "orchard",
   "carrying": [
     "pencil_55",
     "driftwood",
@@ -20,16 +20,17 @@
   ],
   "coins": 3,
   "doing": {
-    "verb": "asleep",
-    "what": "",
-    "clock": "2026-11-12T21:05:02"
+    "verb": "sat thinking about",
+    "what": "The plank is still a mystery and I've stopped asking Caleb about it. I",
+    "clock": "2026-11-13T08:53:59",
+    "why": ""
   },
   "weather": "",
-  "mood": "settled",
-  "since_deep": 2,
+  "mood": "restless",
+  "since_deep": 4,
   "because_of": {
     "who": "caleb",
     "text": "i sent you a plank",
-    "at": "2026-11-12T20:33:50"
+    "at": "2026-11-13T08:53:59"
   }
 }

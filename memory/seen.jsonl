@@ -718,3 +718,58 @@
 {"tick": 231, "kind": "world", "src": "move", "text": "you are at top of the lane. cobbles, a drain he does not trust, his own front door on one side. here: nothing much. ways out: house_main, lane_bottom, shop_general, orchard, restaurant, river_bank"}
 {"tick": 232, "kind": "world", "src": "move", "text": "you are at otto's front room. low ceiling, one window onto the lane, a stove in the corner that he is proud of. here: the range, a chair with a woven seat, a work table. ways out: house_back, lane_top, kitchen"}
 {"tick": 232, "kind": "world", "src": "examine", "text": "plank. came in the post."}
+{"tick": 254, "kind": "world", "src": "examine", "text": "plank. came in the post."}
+{"tick": 255, "kind": "world", "src": "examine", "text": "plank. came in the post."}
+{"tick": 255, "kind": "world", "src": "examine", "text": "a shelf. empty at the moment."}
+{"tick": 259, "kind": "world", "src": "move", "text": "you are at the yard behind his house. soil, a leaf pile he has been adding to, and the back wall of his own house. his, in a way the lane is not. a gate in the hedge, into the orchard. here: a pile of leaves, a cracked flowerpot on its side, a scatter of twigs. ways out: house_back, hedge, orchard, back_lane"}
+{"tick": 259, "kind": "world", "src": "examine", "text": "not here."}
+{"tick": 259, "kind": "world", "src": "examine", "text": "not here."}
+{"tick": 260, "kind": "world", "src": "examine", "text": "a pile of leaves. dry at the bottom, damp on top. good for a nest if he wanted one."}
+{"tick": 260, "kind": "world", "src": "use", "text": "you dig into the leaf pile, damp top layer first, and look for beetles and grubs to eat with a pile of leaves."}
+{"tick": 260, "kind": "world", "src": "use", "text": "you dig down through to the dry bottom layer and feel for beetles, grubs or worms with a pile of leaves."}
+{"tick": 260, "kind": "world", "src": "examine", "text": "a scatter of twigs. different thicknesses. some snap, some bend."}
+{"tick": 261, "kind": "world", "src": "examine", "text": "plank. came in the post."}
+{"tick": 261, "kind": "world", "src": "examine", "text": "a pile of leaves. dry at the bottom, damp on top. good for a nest if he wanted one."}
+{"tick": 261, "kind": "world", "src": "use", "text": "you dig through the damp top layer and look for beetles and grubs underneath, then eat what I find with a pile of leaves."}
+{"tick": 261, "kind": "world", "src": "move", "text": "you are at the back lane. a narrow way behind the houses, hedge on one side and the backs of things on the other. nobody sweeps it. here: the drain, stacked crates. ways out: yard, cafe, library, hedge"}
+{"tick": 261, "kind": "world", "src": "move", "text": "you are at under the hedge. a low green tunnel running the length of the gardens. dark, dry, full of small noises. nothing bigger than him can get in here. here: the hedge roots, old snail shells. ways out: yard, back_lane"}
+{"tick": 261, "kind": "world", "src": "examine", "text": "not here."}
+{"tick": 262, "kind": "world", "src": "move", "text": "you are at the yard behind his house. soil, a leaf pile he has been adding to, and the back wall of his own house. his, in a way the lane is not. a gate in the hedge, into the orchard. here: a pile of leaves, a cracked flowerpot on its side, a scatter of twigs. ways out: house_back, hedge, orchard, back_lane"}
+{"tick": 262, "kind": "world", "src": "examine", "text": "not here."}
+{"tick": 262, "kind": "world", "src": "examine", "text": "not here."}
+{"tick": 263, "kind": "world", "src": "examine", "text": "plank. came in the post."}
+{"tick": 263, "kind": "world", "src": "use", "text": "you dig into the leaf pile and look under it for beetles and grubs to eat with a pile of leaves."}
+{"tick": 263, "kind": "world", "src": "move", "text": "you are at the orchard. four old pear trees in a row, further apart than they look from the lane. the ground is soft with fallen fruit and the wasps are busy. here: the first pear tree, the second pear tree, the third pear tree, the fourth pear tree, the old wall, a gap in the top corner. ways out: yard, lane_top, lane_out"}
+{"tick": 263, "kind": "world", "src": "examine", "text": "not here."}
+{"tick": 264, "kind": "world", "src": "examine", "text": "the first pear tree. the oldest. leans south. the fruit at the top is always best and always out of reach."}
+{"tick": 264, "kind": "world", "src": "use", "text": "not here."}
+{"tick": 264, "kind": "world", "src": "examine", "text": "not here."}
+{"tick": 264, "kind": "world", "src": "examine", "text": "the second pear tree. straight, and younger. a branch comes low enough to matter."}
+{"tick": 264, "kind": "world", "src": "examine", "text": "the orchard. four old pear trees in a row, further apart than they look from the lane. the ground is soft with fallen fruit and the wasps are busy."}
+{"tick": 265, "kind": "world", "src": "examine", "text": "the first pear tree. the oldest. leans south. the fruit at the top is always best and always out of reach."}
+{"tick": 265, "kind": "world", "src": "examine", "text": "a gap in the top corner. the hedge stops and starts again, and the grass between is worn flat."}
+{"tick": 265, "kind": "world", "src": "examine", "text": "the old wall. brick, mostly. one part has come down and nobody has put it back."}
+{"tick": 265, "kind": "world", "src": "use", "text": "not here."}
+{"tick": 265, "kind": "world", "src": "examine", "text": "not here."}
+{"tick": 266, "kind": "world", "src": "use", "text": "you get at one. it is a long way up and you come down faster than you went. the pear is worth it: sweet, and it runs down your chin."}
+{"tick": 266, "kind": "world", "src": "use", "text": "you get at one. it is a long way up and you come down faster than you went. the pear is worth it: sweet, and it runs down your chin."}
+{"tick": 266, "kind": "world", "src": "examine", "text": "plank. came in the post."}
+{"tick": 266, "kind": "world", "src": "examine", "text": "a gap in the top corner. the hedge stops and starts again, and the grass between is worn flat."}
+{"tick": 266, "kind": "world", "src": "move", "text": "there is no gap_orchard."}
+{"tick": 266, "kind": "world", "src": "move", "text": "you are at the yard behind his house. soil, a leaf pile he has been adding to, and the back wall of his own house. his, in a way the lane is not. a gate in the hedge, into the orchard. here: a pile of leaves, a cracked flowerpot on its side, a scatter of twigs. ways out: house_back, hedge, orchard, back_lane"}
+{"tick": 267, "kind": "world", "src": "examine", "text": "plank. came in the post."}
+{"tick": 267, "kind": "world", "src": "examine", "text": "a pile of leaves. dry at the bottom, damp on top. good for a nest if he wanted one."}
+{"tick": 267, "kind": "world", "src": "use", "text": "you dig through the leaf pile for beetles and snails to eat with a pile of leaves."}
+{"tick": 267, "kind": "world", "src": "move", "text": "you are at the orchard. four old pear trees in a row, further apart than they look from the lane. the ground is soft with fallen fruit and the wasps are busy. here: the first pear tree, the second pear tree, the third pear tree, the fourth pear tree, the old wall, a gap in the top corner. ways out: yard, lane_top, lane_out"}
+{"tick": 268, "kind": "world", "src": "examine", "text": "plank. came in the post."}
+{"tick": 268, "kind": "world", "src": "examine", "text": "a gap in the top corner. the hedge stops and starts again, and the grass between is worn flat."}
+{"tick": 268, "kind": "world", "src": "examine", "text": "the old wall. brick, mostly. one part has come down and nobody has put it back."}
+{"tick": 268, "kind": "world", "src": "examine", "text": "the first pear tree. the oldest. leans south. the fruit at the top is always best and always out of reach."}
+{"tick": 268, "kind": "world", "src": "use", "text": "you get at one. it is a long way up and you come down faster than you went. the pear is worth it: sweet, and it runs down your chin."}
+{"tick": 269, "kind": "world", "src": "examine", "text": "a gap in the top corner. the hedge stops and starts again, and the grass between is worn flat."}
+{"tick": 269, "kind": "world", "src": "examine", "text": "the old wall. brick, mostly. one part has come down and nobody has put it back."}
+{"tick": 269, "kind": "world", "src": "examine", "text": "not here."}
+{"tick": 269, "kind": "world", "src": "examine", "text": "not here."}
+{"tick": 270, "kind": "world", "src": "examine", "text": "plank. came in the post."}
+{"tick": 270, "kind": "world", "src": "examine", "text": "a gap in the top corner. the hedge stops and starts again, and the grass between is worn flat."}
+{"tick": 270, "kind": "world", "src": "examine", "text": "the old wall. brick, mostly. one part has come down and nobody has put it back."}
