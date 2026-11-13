@@ -2520,21 +2520,22 @@
       "condition": 0.99
     },
     {
-      "id": "the_leaning_thing",
-      "name": "something leaning against the end wall",
+      "id": "tandem_working",
+      "name": "the tandem, the one you asked for",
       "place": "lane_top",
+      "shape": "tandem",
       "tags": [
         "fixed",
-        "strange",
-        "ride"
+        "ride",
+        "gift"
       ],
-      "shape": "tandem",
+      "note": "two rings, one behind the other, held apart by a frame of straight tubes. two seats along the top and two sets of handles. the rings are true and spin without a sound, the hubs are packed and the chain is new and oiled. the frame is steel, red, and about as heavy as two sacks of flour. it stands on its own stand and it is yours.",
+      "from": "caleb",
       "at": [
         0.0,
         -5.8
       ],
-      "face": 1.5708,
-      "note": "two rings, taller than you, one behind the other, held apart by a frame of thin bars. there are two seats along the top, one in front of the other, and two sets of bent handles. the rings turn when you push them and the whole thing wants to fall over. it is cold and it has been rained on. you have no idea what it is, what it is for, or who left it here."
+      "face": 1.5708
     }
   ],
   "tree_scale": 1.0
